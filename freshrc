@@ -1,0 +1,9 @@
+fresh freshshell/fresh bin/fresh --bin
+
+fresh lewiseason/dotfiles rc/\*         --file
+fresh lewiseason/dotfiles bin/\*        --bin
+
+fresh lewiseason/dotfiles ssh_config    --file=~/.ssh/config
+fresh lewiseason/dotfiles fonts         --file=~/.fonts/
+fresh lewiseason/dotfiles redshift.conf --file=~/.config/redshift.conf
+# ln -sf ~/.dotfiles/foo ~/.config/foo
