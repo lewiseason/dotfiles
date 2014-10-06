@@ -22,7 +22,7 @@
   rebase = true
 
 [push]
-  default = simple
+  default = current
 
 [color]
   ui = true
