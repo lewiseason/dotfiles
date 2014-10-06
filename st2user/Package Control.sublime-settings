@@ -1,0 +1,34 @@
+{
+	"cache_length": 604800,
+	"installed_packages":
+	[
+		"Abacus",
+		"Can I Use",
+		"CoffeeScript",
+		"ColorPicker",
+		"Cucumber",
+		"EditorConfig",
+		"Emmet",
+		"FileDiffs",
+		"Format SQL",
+		"Gist",
+		"Git",
+		"Git Conflict Resolver",
+		"Handlebars",
+		"LineEndings",
+		"Move Tabs",
+		"OmniMarkupPreviewer",
+		"Package Control",
+		"Puppet",
+		"Puppet Syntax checking",
+		"SideBarEnhancements",
+		"SchemeCycler",
+		"SCSS",
+		"SublimeCodeIntel",
+		"SublimeLinter",
+		"TabsLimiter",
+		"Theme - Spacegray",
+		"TrailingSpaces",
+		"VCS Gutter"
+	]
+}
