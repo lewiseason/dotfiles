@@ -1,0 +1,46 @@
+set nocompatible
+set background=dark
+
+if !has('win32') && !has('win64')
+  set term=$TERM
+endif
+
+filetype off
+filetype plugin indent off
+" set rtp+=~/.vim/bundle/vundle/
+" call vundle#rc()
+
+filetype plugin indent on
+syntax on
+
+set mouse-=a
+
+scriptencoding utf-8
+
+set history=1000
+
+set showmatch
+set hlsearch
+set ignorecase
+set smartcase
+
+" Formatting
+set ts=2 sts=2 sw=2
+set expandtab
+set modelines=1
+
+set nowrap
+set autoindent
+set preserveindent
+
+cmap W  w
+cmap Wq wq
+cmap Q  q
+
+" When you forget to sudo...
+cmap w!! w !sudo tee % >/dev/null
+
+nnoremap <CR> :noh<CR><CR>:<backspace>
+
+" Bundles
+" Bundle 'gmarik/vundle'

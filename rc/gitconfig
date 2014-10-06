@@ -1,0 +1,35 @@
+[user]
+  name = Lewis Eason
+  email = me@lewiseason.co.uk
+
+[core]
+  repositoryformatversion = 0
+  filemode = true
+  editor = vim
+  bare = false
+  logallrefupdates = true
+
+[alias]
+  # Will change `git git X` into `git X`
+  git = !git
+  extstatus = status --porcelain -u
+
+  # For use with semver/semver2 gem
+  semtag = !git tag -a $(semver tag) -m \"Version $(semver tag\"
+  semcommit = !git add .semver && git commit -m \"`semver format 'Version %M.%m.%p%s'`\" && git tag -a `semver tag` -m `semver`
+
+[pull]
+  rebase = true
+
+[push]
+  default = simple
+
+[color]
+  ui = true
+
+[url "git@github.com"]
+  # So you can `git clone github:foo/bar`
+  insteadOf = "github"
+
+[url "git@bitbucket.org"]
+  insteadOf = "bitbucket"
