@@ -1,0 +1,42 @@
+[global_config]
+  handle_size = 1
+  enabled_plugins = InactivityWatch, ActivityWatch, LaunchpadCodeURLHandler, APTURLHandler, Logger, LaunchpadBugURLHandler
+  close_button_on_tab = False
+  scroll_tabbar = True
+  borderless = True
+  inactive_color_offset = 0.88
+[keybindings]
+  cycle_prev = None
+  next_tab = <Primary>Tab
+  prev_tab = <Primary><Shift>Tab
+  new_window = <Primary>n
+  cycle_next = None
+  new_tab = <Primary>t
+[profiles]
+  [[default]]
+    background_image = None
+    login_shell = True
+    visible_bell = True
+    background_darkness = 0.87
+    background_type = transparent
+    scrollbar_position = hidden
+    scroll_on_output = False
+    show_titlebar = False
+    scrollback_infinite = True
+  [[switches]]
+    background_image = None
+    login_shell = True
+    visible_bell = True
+    backspace_binding = control-h
+    scroll_on_output = False
+    scrollback_infinite = True
+[layouts]
+  [[default]]
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+      profile = default
+    [[[window0]]]
+      type = Window
+      parent = ""
+[plugins]

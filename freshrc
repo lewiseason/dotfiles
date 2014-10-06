@@ -1,25 +1,35 @@
+# Keep fresh up to date
 fresh freshshell/fresh bin/fresh  --bin
 
+# ~/. files
 fresh rc/\*                --file
+
+# scripts
 fresh bin/\*               --bin
 
-fresh ssh_config           --file=~/.ssh/config
-fresh fonts                --file=~/.fonts/
-fresh redshift.conf        --file=~/.config/redshift.conf
-
+# generic  shell
 fresh shell/aliases/\*
 fresh shell/config/\*
 
+# bash
 fresh-options --file=~/.bashrc
   fresh freshshell/fresh contrib/source-build.sh
   fresh freshshell/fresh contrib/completion/fresh-completion.bash
   fresh shell/bash/\*
 fresh-options
 
+# zsh
 fresh-options --file=~/.zshrc
   fresh freshshell/fresh contrib/source-build.sh
   fresh freshshell/fresh contrib/completion/fresh-completion.zsh
   fresh shell/zsh/\*
 fresh-options
+
+# fonts
+fresh fonts                --file=~/.fonts/
+
+fresh config/ssh           --file=~/.ssh/config
+fresh config/redshift.conf --file=~/.config/redshift.conf
+fresh config/terminator    --file=~/.config/terminator/config
 
 # ln -sf ~/.dotfiles/foo ~/.config/foo
