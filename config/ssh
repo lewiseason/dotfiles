@@ -7,38 +7,38 @@ CompressionLevel 6
 TCPKeepAlive yes
 
 # Personal
-Host eday
+Host eday eday.eason.io
 Hostname eday.eason.io
 
-Host fara
+Host fara fara.eason.io
 Hostname fara.eason.io
 
-Host harris
+Host harris harris.eason.io
 Hostname harris.eason.io
 User leason
 
-Host hoy
+Host hoy hoy.eason.io
 Hostname hoy.eason.io
 User leason
 
-Host jura
+Host jura jura.eason.io
 Hostname jura.eason.io
 
-Host muck
+Host muck much.eason.io
 Hostname muck.eason.io
 
 Host mull flat flat.lewiseason.co.uk
 Hostname mull.eason.io
 User lewis
 
-Host noss
+Host noss noss.eason.io
 Hostname noss.eason.io
 User lewis
 
-Host papa
+Host papa papa.eason.io
 Hostname papa.eason.io
 
-Host wyre puppet
+Host wyre puppet wyre.eason.io
 Hostname wyre.eason.io
 User leason
 
