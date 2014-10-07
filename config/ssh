@@ -7,7 +7,7 @@ CompressionLevel 6
 TCPKeepAlive yes
 
 # Personal
-Host dunoon dunoon.eason.io
+Host dunbar dunbar.eason.io
 Hostname 212.111.40.200
 User root
 
