@@ -7,6 +7,10 @@ CompressionLevel 6
 TCPKeepAlive yes
 
 # Personal
+Host dunoon dunoon.eason.io
+Hostname 212.111.40.200
+User root
+
 Host eday eday.eason.io
 Hostname eday.eason.io
 
