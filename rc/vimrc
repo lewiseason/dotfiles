@@ -19,19 +19,29 @@ scriptencoding utf-8
 
 set history=1000
 
+" Search
 set showmatch
 set hlsearch
 set ignorecase
 set smartcase
 
-" Formatting
+" Spacing and Tabs
 set ts=2 sts=2 sw=2
 set expandtab
-set modelines=1
-
 set nowrap
 set autoindent
 set preserveindent
+
+set scrolloff=8
+
+" Appearance
+set nonumber
+set nowrap
+set linebreak
+set list listchars=trail:~
+" set columns=80
+set showmode
+set modelines=1
 
 cmap W  w
 cmap Wq wq

@@ -7,10 +7,6 @@ CompressionLevel 6
 TCPKeepAlive yes
 
 # Personal
-Host dunbar dunbar.eason.io
-Hostname 212.111.40.200
-User root
-
 Host eday eday.eason.io
 Hostname eday.eason.io
 
@@ -28,7 +24,7 @@ User leason
 Host jura jura.eason.io
 Hostname jura.eason.io
 
-Host muck much.eason.io
+Host muck muck.eason.io
 Hostname muck.eason.io
 
 Host mull flat flat.lewiseason.co.uk
@@ -41,10 +37,6 @@ User lewis
 
 Host papa papa.eason.io
 Hostname papa.eason.io
-
-Host wyre puppet wyre.eason.io
-Hostname wyre.eason.io
-User leason
 
 ## Utilities
 Host keepass
@@ -153,3 +145,12 @@ Hostname bgqfe4.epcc.ed.ac.uk
 User dc-easo1
 ForwardAgent yes
 
+## RDF
+Host rdf-login rdf-login.epcc.ed.ac.uk
+Hostname rdf-login.epcc.ed.ac.uk
+# User ?
+ForwardAgent yes
+
+Host rdf-services rdf-services.epcc.ed.ac.uk
+Hostname rdf-services.epcc.ed.ac.uk
+User sysadm
