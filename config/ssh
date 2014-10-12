@@ -82,18 +82,24 @@ Hostname vanilla.eusa.ed.ac.uk
 User lewis
 
 # SparkSeat
+Host arthur arthur.sparkseat.com
+Hostname arthur.sparkseat.com
+User lewis
+ForwardAgent yes
+
+
 Host cullen cullen.sparkseat.com
 Hostname cullen.sparkseat.com
 User lewis
-ForwardAgent yes
 
 Host marvin marvin.sparkseat.com
 Hostname marvin.sparkseat.com
 User lewis
 
-Host deepthought
-Hostname deepthought.sparkseat.com
+Host eddie eddie.hive.sparkseat.com
+Hostname eddie.hive.sparkseat.com
 User lewis
+ProxyCommand ssh -W %h:%p arthur
 
 # ACF
 Host login login.acf acf-login
