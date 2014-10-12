@@ -82,11 +82,12 @@ Hostname vanilla.eusa.ed.ac.uk
 User lewis
 
 # SparkSeat
-Host cullen
+Host cullen cullen.sparkseat.com
 Hostname cullen.sparkseat.com
 User lewis
+ForwardAgent yes
 
-Host marvin
+Host marvin marvin.sparkseat.com
 Hostname marvin.sparkseat.com
 User lewis
 
