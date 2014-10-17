@@ -115,6 +115,10 @@ Host acfservices
 Hostname acfservices
 User leason
 
+Host graph graph.acf graph.acf.ed.ac.uk
+Hostname graph.acf.ed.ac.uk
+User sysadm
+
 Host tarn tarn.acf.ed.ac.uk loch
 Hostname tarn.acf.ed.ac.uk
 User leason
