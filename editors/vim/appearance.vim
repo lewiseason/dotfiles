@@ -7,6 +7,3 @@ set showmode
 
 " Observe modelines in files
 set modelines=1
-
-" No splash screen
-shortmess+=I

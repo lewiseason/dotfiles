@@ -5,11 +5,6 @@ if !has('win32') && !has('win64')
   set term=$TERM
 endif
 
-filetype off
-filetype plugin indent off
-" set rtp+=~/.vim/bundle/vundle/
-" call vundle#rc()
-
 filetype plugin indent on
 syntax on
 
