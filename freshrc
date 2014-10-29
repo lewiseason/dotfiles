@@ -23,7 +23,6 @@ fresh-options --file=~/.vimrc --marker=\"
   fresh editors/vim/indent.vim
   fresh editors/vim/search.vim
 
-  fresh editors/vim/leader.vim
   fresh editors/vim/keys.vim
 fresh-options
 

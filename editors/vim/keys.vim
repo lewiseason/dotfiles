@@ -1,3 +1,5 @@
+let mapleader = ","
+
 cmap W  w
 cmap Wq wq
 
