@@ -2,14 +2,30 @@
 fresh freshshell/fresh bin/fresh  --bin
 
 # ~/. files
-fresh rc/\*                --file
+fresh rc/\*      --file
 
 # scripts
-fresh bin/\*               --bin
+fresh bin/\*     --bin
 
 # generic  shell
 fresh shell/aliases/\*
 fresh shell/config/\*
+
+# vim
+fresh-options --file=~/.vimrc --marker=\"
+  fresh twe4ked/dotfiles vim/vundle_before.vim
+  fresh editors/vim/vundle.vim
+  # fresh editors/vim/plugins/\*.vim
+  fresh twe4ked/dotfiles vim/vundle_after.vim
+
+  fresh editors/vim/global.vim
+  fresh editors/vim/appearance.vim
+  fresh editors/vim/indent.vim
+  fresh editors/vim/search.vim
+
+  fresh editors/vim/leader.vim
+  fresh editors/vim/keys.vim
+fresh-options
 
 # bash
 fresh-options --file=~/.bashrc
