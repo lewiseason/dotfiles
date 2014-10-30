@@ -35,6 +35,7 @@
 [url "git@bitbucket.org"]
   insteadOf = "bitbucket"
 
+# http://tbaggery.com/2010/10/24/reduce-your-rails-schema-conflicts.html
 [merge "railsschema"]
   name = Rails Database Schema
   driver = "ruby -e '\n\
