@@ -10,7 +10,8 @@ These dotfiles are managed by [fresh].
 
 ## Development
 
-When developing, it can be tedious to commit the repo, push and run `fresh update`.
+When developing on a system when the repo is in a non-standard place, 
+it is tedious and impractical to commit the repo, push and run `fresh update`.
 
 Instead, pass the following environment to fresh, to override where it should look for it's configuration:
 
