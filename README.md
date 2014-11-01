@@ -8,6 +8,18 @@ FRESH_LOCAL_SOURCE=lewiseason/dotfiles bash <(\curl -sL get.freshshell.com)
 
 These dotfiles are managed by [fresh].
 
+## Development
+
+When developing, it can be tedious to commit the repo, push and run `fresh update`.
+
+Instead, pass the following environment to fresh, to override where it should look for it's configuration:
+
+``` sh
+FRESH_RCFILE=~/projects/dotfiles/freshrc FRESH_LOCAL=~/projects/dotfiles
+```
+
+## Notes
+
 
 ### Fonts
 
@@ -18,10 +30,6 @@ Applications will need to be restarted after doing so.
 
 * [inconsolata] is released under the Open Font License.
 * [source code pro] is released under the Open Font License.
-
-### Sublime Text
-
-Requires configuration for ST2 and ST3. Don't forget VCS Gutter, or work out why GutterColor isn't working.
 
 [fresh]: http://freshshell.com
 [inconsolata]: http://levien.com/type/myfonts/inconsolata.html
