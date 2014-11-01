@@ -1,0 +1,37 @@
+#!/usr/bin/env python
+
+TRANSPORT = 'https'
+BASE_URL  = 'api.bitbucket.org/1.0'
+USERNAME  = 'lewiseason'
+FILE_NAME = '~/.ssh/id_rsa.pub'
+
+import urllib
+import os
+import getpass
+
+def ask(ask_for, default=None, hidden=False):
+  if not hidden:
+    v = raw_input("%s [%s]:" % (ask_for, default))
+  else:
+    v = getpass.getpass("%s: " % ask_for)
+
+  return v if v != "" else default
+
+FILE_NAME = os.path.expanduser(ask('Key file', FILE_NAME))
+USERNAME  = ask('Username', USERNAME)
+PASSWORD  = ask('Password', '', hidden=True)
+
+URL = "%s://%s:%s@%s/users/%s/ssh-keys" % (TRANSPORT, USERNAME, PASSWORD, BASE_URL, USERNAME)
+
+rep = urllib.urlopen(URL, urllib.urlencode({
+  'accountname': USERNAME,
+  'label': os.uname()[1],
+  'key': open(FILE_NAME, 'r').read(),
+}))
+
+if rep.code in range(200, 208):
+  print "Key imported successfully"
+else:
+  print "Something went wrong:"
+  print rep.code, rep.read()
+
