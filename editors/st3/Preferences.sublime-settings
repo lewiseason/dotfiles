@@ -1,0 +1,24 @@
+{
+	"color_scheme": "Packages/User/base16-ocean.dark (SL).tmTheme",
+	"ensure_newline_at_eof_on_save": true,
+	"font_size": 9,
+	"highlight_line": true,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"indent_guide_options":
+	[
+		"draw_normal",
+		"draw_active"
+	],
+	"rulers":
+	[
+		79,
+		120
+	],
+	"tab_size": 2,
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true,
+	"use_tab_stops": false
+}
