@@ -1,3 +1,4 @@
+
 # Keep fresh up to date
 fresh freshshell/fresh bin/fresh  --bin
 
@@ -7,7 +8,7 @@ fresh rc/\*      --file
 # scripts
 fresh bin/\*     --bin
 
-# generic  shell
+# generic shell
 fresh shell/aliases/\*
 fresh shell/config/\*
 
@@ -25,6 +26,12 @@ fresh-options --file=~/.vimrc --marker=\"
 
   fresh editors/vim/keys.vim
 fresh-options
+
+# sublime text 3
+for file in editors/st3/*; do
+  echo $file
+  fresh "$file" --file="~/.config/sublime-text-3/Packages/User/$(basename $file)"
+done
 
 # bash
 fresh-options --file=~/.bashrc
@@ -48,3 +55,5 @@ fresh config/redshift.conf --file=~/.config/redshift.conf
 fresh config/terminator    --file=~/.config/terminator/config
 
 # ln -sf ~/.dotfiles/foo ~/.config/foo
+
+# fresh lewiseason/
