@@ -30,7 +30,7 @@ fresh-options
 for file in editors/st3/*; do
   path="~/.config/sublime-text-3/Packages/User/`basename \"$file\"`"
   # https://github.com/freshshell/fresh/issues/119
-  path=$(echo "$path" | sed -e 's/ /\\ /g' -e 's/(/\\(/g' -e 's/)/\\)/g')
+  # path=$(echo "$path" | sed -e 's/ /\\ /g' -e 's/(/\\(/g' -e 's/)/\\)/g')
   fresh "$file" --file="$path"
 done
 
