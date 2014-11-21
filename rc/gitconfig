@@ -1,6 +1,7 @@
 [user]
   name = Lewis Eason
   email = me@lewiseason.co.uk
+  signingkey = 465C30A9
 
 [core]
   repositoryformatversion = 0

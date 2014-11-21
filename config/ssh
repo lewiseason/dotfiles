@@ -130,6 +130,10 @@ Hostname login.archer.ac.uk
 User leason
 ForwardAgent yes
 
+Host tds tds.archer tds1.archer.ac.uk
+Hostname tds1.archer.ac.uk
+User leason
+
 Host archer-services services.archer.ac.uk services.archer
 Hostname services.archer.ac.uk
 User leason
