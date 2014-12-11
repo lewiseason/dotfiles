@@ -1,6 +1,6 @@
 [global_config]
   handle_size = 1
-  enabled_plugins = InactivityWatch, ActivityWatch, LaunchpadCodeURLHandler, APTURLHandler, Logger, LaunchpadBugURLHandler
+  enabled_plugins = InactivityWatch, GrepPlugin, ActivityWatch, LaunchpadCodeURLHandler, APTURLHandler, Logger, LaunchpadBugURLHandler
   close_button_on_tab = False
   scroll_tabbar = True
   borderless = True
@@ -17,11 +17,13 @@
     background_image = None
     login_shell = True
     visible_bell = True
-    background_darkness = 0.87
+    background_darkness = 0.92
     background_type = transparent
     scrollbar_position = hidden
+    foreground_color = "#839496"
     scroll_on_output = False
     show_titlebar = False
+    background_color = "#002b36"
     scrollback_infinite = True
   [[switches]]
     background_image = None
@@ -40,3 +42,5 @@
       type = Window
       parent = ""
 [plugins]
+  [[GrepPlugin]]
+    command = gvim --remote-silent +{line} {filepath}

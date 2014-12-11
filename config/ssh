@@ -7,11 +7,18 @@ CompressionLevel 6
 TCPKeepAlive yes
 
 # Personal
+Host bute bute.eason.io
+Hostname bute.eason.io
+User leason
+
+
 Host eday eday.eason.io
 Hostname eday.eason.io
+User lewis
 
 Host fara fara.eason.io
 Hostname fara.eason.io
+User lewis
 
 Host harris harris.eason.io
 Hostname harris.eason.io
@@ -87,7 +94,6 @@ Hostname arthur.sparkseat.com
 User lewis
 ForwardAgent yes
 
-
 Host cullen cullen.sparkseat.com
 Hostname cullen.sparkseat.com
 User lewis
@@ -98,6 +104,11 @@ User lewis
 
 Host eddie eddie.hive.sparkseat.com
 Hostname eddie.hive.sparkseat.com
+User lewis
+ProxyCommand ssh -W %h:%p arthur
+
+Host fook fook.hive.sparkseat.com
+Hostname fook.hive.sparkseat.com
 User lewis
 ProxyCommand ssh -W %h:%p arthur
 
@@ -125,7 +136,7 @@ User leason
 ForwardAgent yes
 
 # Archer
-Host archer login.archer login.archer.ac.uk
+Host archer login.archer login.archer.ac.uk login[1-8].archer.ac.uk
 Hostname login.archer.ac.uk
 User leason
 ForwardAgent yes
@@ -142,6 +153,11 @@ ForwardAgent yes
 Host archer-wiki
 User sysadm
 Hostname wiki-mn
+ProxyCommand ssh -W %h:%p tarn
+
+Host esms
+User crayadm
+Hostname esms-mn
 ProxyCommand ssh -W %h:%p tarn
 
 # Bluegene
