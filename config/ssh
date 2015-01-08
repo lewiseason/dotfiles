@@ -185,3 +185,9 @@ ForwardAgent yes
 Host rdf-services rdf-services.epcc.ed.ac.uk
 Hostname rdf-services.epcc.ed.ac.uk
 User sysadm
+
+## INDY
+Host indy0 indy-linux indy0.epcc.ed.ac.uk
+Hostname indy0.epcc.ed.ac.uk
+User leason
+ForwardAgent yes
