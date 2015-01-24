@@ -11,6 +11,9 @@
   logallrefupdates = true
   attributesfile = ~/.gitattributes
 
+[help]
+autocorrect = 5
+
 [alias]
   # Will change `git git X` into `git X`
   git = !git
