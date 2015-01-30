@@ -55,5 +55,6 @@ fresh config/ssh           --file=~/.ssh/config
 fresh config/redshift.conf --file=~/.config/redshift.conf
 fresh config/terminator    --file=~/.config/terminator/config
 fresh config/powerline-symbols.conf --file=~/.config/fontconfig/conf.d/10-powerline-symbols.conf
+fresh config/powerline-tmux.json --file=~/.config/powerline/themes/tmux/default.json
 
 # ln -sf ~/.dotfiles/foo ~/.config/foo
