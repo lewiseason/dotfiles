@@ -12,16 +12,19 @@
   attributesfile = ~/.gitattributes
 
 [help]
-autocorrect = 5
+  autocorrect = 5
 
 [alias]
   # Will change `git git X` into `git X`
   git = !git
   extstatus = status --porcelain -u
 
-  # For use with semver/semver2 gem
-  semtag = !git tag -a $(semver tag) -m \"Version $(semver tag\"
-  semcommit = !git add .semver && git commit -m \"`semver format 'Version %M.%m.%p%s'`\" && git tag -a `semver tag` -m `semver`
+  # For use with semver/semver2/yavm gem
+  semtag = !git tag -a $(version tag) -m \"Version $(version)\"
+  semcommit = !git add $(version files) && git commit -m \"Version `version`\" && git semtag
+
+  #semtag = !git tag -a $(semver tag) -m \"Version $(semver tag\"
+  #semcommit = !git add .semver && git commit -m \"`semver format 'Version %M.%m.%p%s'`\" && git tag -a `semver tag` -m `semver`
 
 [pull]
   rebase = true

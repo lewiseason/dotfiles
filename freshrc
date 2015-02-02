@@ -29,8 +29,6 @@ fresh-options
 # sublime text 3
 for file in editors/st3/*; do
   path="~/.config/sublime-text-3/Packages/User/`basename \"$file\"`"
-  # https://github.com/freshshell/fresh/issues/119
-  # path=$(echo "$path" | sed -e 's/ /\\ /g' -e 's/(/\\(/g' -e 's/)/\\)/g')
   fresh "$file" --file="$path"
 done
 
@@ -54,7 +52,8 @@ fresh fonts                --file=~/.fonts/
 fresh config/ssh           --file=~/.ssh/config
 fresh config/redshift.conf --file=~/.config/redshift.conf
 fresh config/terminator    --file=~/.config/terminator/config
+
 fresh config/powerline-symbols.conf --file=~/.config/fontconfig/conf.d/10-powerline-symbols.conf
-fresh config/powerline-tmux.json --file=~/.config/powerline/themes/tmux/default.json
+fresh config/powerline-tmux.json    --file=~/.config/powerline/themes/tmux/default.json
 
 # ln -sf ~/.dotfiles/foo ~/.config/foo
