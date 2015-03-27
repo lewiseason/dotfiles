@@ -10,9 +10,10 @@
     ],
     "right": [
       {
-        "function": "powerline.segments.common.sys.uptime",
+        "function": "powerline.segments.common.players.clementine",
+        "name": "player",
         "args": {
-          "shorten_len": 1
+          "format": "{state_symbol}"
         }
       },
       {
