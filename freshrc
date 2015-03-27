@@ -49,7 +49,9 @@ fresh-options
 # fonts
 fresh fonts                --file=~/.fonts/
 
-fresh git@bitbucket.org:lewiseason/ssh_config.git \* --file=~/.ssh/config
+# SSH Config
+# Pull all the files in the repo, concatenate them and then append the "Hostname" to each "Host"
+fresh git@bitbucket.org:lewiseason/ssh_config.git \* --file=~/.ssh/config --filter="perl -0 -pe 's/\nHost (.*)\nHostname (.*)\n/\nHost \1 \2\nHostname \2\n/g'"
 
 fresh config/redshift.conf --file=~/.config/redshift.conf
 fresh config/terminator    --file=~/.config/terminator/config
