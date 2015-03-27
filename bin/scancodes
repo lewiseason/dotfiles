@@ -1,0 +1,13 @@
+stdbuf -oL showkey -s | while read line
+do
+  if [[ "$line" =~ '^0x' ]]
+  then
+    for code in ${(z)line}
+    do
+      printf "0%o " $code
+    done
+    echo
+  else
+    echo $line
+  fi
+done
