@@ -1,7 +1,7 @@
 [Appearance]
 BoldIntense=true
 ColorScheme=Lewis
-# Font=DejaVu Sans Mono,9,-1,5,50,0,0,0,0,0
+Font=Monospace,8,-1,5,50,0,0,0,0,0
 
 [General]
 Command=/bin/zsh
