@@ -4,8 +4,3 @@
  * skye
  * minto
 * Write better pubkey-to-* script
-* Install non-packaged things somehow
- * sublime text
- * (+ package control?)
- * oh-my-zsh
- * (+ config)

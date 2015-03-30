@@ -15,20 +15,26 @@ fresh shell/config/\*
 # vim
 fresh-options --file=~/.vimrc --marker=\"
   fresh twe4ked/dotfiles vim/vundle_before.vim
-  fresh editors/vim/vundle.vim
+  fresh apps/editors/vim/vundle.vim
   fresh twe4ked/dotfiles vim/vundle_after.vim
 
-  fresh editors/vim/global.vim
-  fresh editors/vim/appearance.vim
-  fresh editors/vim/indent.vim
-  fresh editors/vim/search.vim
+  fresh apps/editors/vim/global.vim
+  fresh apps/editors/vim/appearance.vim
+  fresh apps/editors/vim/indent.vim
+  fresh apps/editors/vim/search.vim
 
-  fresh editors/vim/keys.vim
+  fresh apps/editors/vim/keys.vim
 fresh-options
 
 # sublime text 3
-for file in editors/st3/*; do
+for file in apps/editors/st3/*; do
   path="~/.config/sublime-text-3/Packages/User/`basename \"$file\"`"
+  fresh "$file" --file="$path"
+done
+
+# konsole
+for file in apps/terminals/konsole/*; do
+  path="~/.kde/share/apps/konsole/`basename \"$file\"`"
   fresh "$file" --file="$path"
 done
 
@@ -60,3 +66,7 @@ fresh config/powerline-symbols.conf --file=~/.config/fontconfig/conf.d/10-powerl
 fresh config/powerline-tmux.json    --file=~/.config/powerline/themes/tmux/default.json
 
 # ln -sf ~/.dotfiles/foo ~/.config/foo
+
+fresh_after_build() {
+  fc-cache ~/.fonts
+}

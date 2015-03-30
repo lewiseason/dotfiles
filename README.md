@@ -10,12 +10,18 @@ FRESH_LOCAL_SOURCE=lewiseason/dotfiles bash <(\curl -sL get.freshshell.com)
 
 These dotfiles are managed by [fresh].
 
+## Requirements
+
+* keychain
+
 ## Notes
 
 ### Fonts
 
 After installing new fonts, it might be necessary
-to rebuild the cache. Run `fc-cache -fv` to do this.
+to rebuild the cache. Fresh does this automatically
+using the `after_build` hook, but if you want to
+force a run, do `fc-cache -rv`
 
 Applications will need to be restarted after doing so.
 
