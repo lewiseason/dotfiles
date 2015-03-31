@@ -27,10 +27,11 @@ fresh-options --file=~/.vimrc --marker=\"
 fresh-options
 
 # sublime text 3
-for file in apps/editors/st3/*; do
-  path="~/.config/sublime-text-3/Packages/User/`basename \"$file\"`"
-  fresh "$file" --file="$path"
+find apps/editors/st3 -type f -print0 | while IFS= read -r -d $'\0' path; do
+  file=`basename "$path"`
+  fresh "$path" --file="~/.config/sublime-text-3/Packages/User/$file"
 done
+  #fresh "$file" --file="$path"
 
 # konsole
 for file in apps/terminals/konsole/*; do
