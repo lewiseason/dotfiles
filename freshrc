@@ -5,6 +5,8 @@ fresh freshshell/fresh bin/fresh  --bin
 # in case it's somewhere else - so populate it if blank
 FRESH_LOCAL=${FRESH_LOCAL-~/.dotfiles}
 
+cd $FRESH_LOCAL
+
 # ~/. files
 fresh rc/\*      --file
 
@@ -29,19 +31,22 @@ fresh-options --file=~/.vimrc --marker=\"
   fresh apps/editors/vim/keys.vim
 fresh-options
 
-cd $FRESH_LOCAL
+each_in_path() {
+  # Fresh each file in the source directory
+  # to one with the same name in the destination directory.
+  #   $1  source directory
+  #   $2  destination directory
+  find "$1" -type f -print0 | while IFS= read -r -d $'\0' path; do
+    file=`basename "$path"`
+    fresh "$path" --file="$2/$file"
+  done
+}
 
 # sublime text 3
-find apps/editors/st3 -type f -print0 | while IFS= read -r -d $'\0' path; do
-  file=`basename "$path"`
-  fresh "$path" --file="~/.config/sublime-text-3/Packages/User/$file"
-done
+each_in_path "apps/editors/st3" "~/.config/sublime-text-3/Packages/User"
 
 # konsole
-find apps/terminals/konsole -type f -print0 | while IFS= read -r -d $'\0' path; do
-  file=`basename "$path"`
-  fresh "$path" --file="~/.kde/share/apps/konsole/$file"
-done
+each_in_path "apps/terminals/konsole" "~/.kde/share/apps/konsole"
 
 # bash
 fresh-options --file=~/.bashrc
