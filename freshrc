@@ -1,6 +1,9 @@
-
 # Keep fresh up to date
 fresh freshshell/fresh bin/fresh  --bin
+
+# We use FRESH_LOCAL to find the ~/.dotfiles directory,
+# in case it's somewhere else - so populate it if blank
+FRESH_LOCAL=${FRESH_LOCAL-~/.dotfiles}
 
 # ~/. files
 fresh rc/\*      --file
@@ -26,17 +29,18 @@ fresh-options --file=~/.vimrc --marker=\"
   fresh apps/editors/vim/keys.vim
 fresh-options
 
+cd $FRESH_LOCAL
+
 # sublime text 3
 find apps/editors/st3 -type f -print0 | while IFS= read -r -d $'\0' path; do
   file=`basename "$path"`
   fresh "$path" --file="~/.config/sublime-text-3/Packages/User/$file"
 done
-  #fresh "$file" --file="$path"
 
 # konsole
-for file in apps/terminals/konsole/*; do
-  path="~/.kde/share/apps/konsole/`basename \"$file\"`"
-  fresh "$file" --file="$path"
+find apps/terminals/konsole -type f -print0 | while IFS= read -r -d $'\0' path; do
+  file=`basename "$path"`
+  fresh "$path" --file="~/.kde/share/apps/konsole/$file"
 done
 
 # bash
