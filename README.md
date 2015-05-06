@@ -39,6 +39,12 @@ to take effect.
 - [ ] Have a look in ~/bin on skye/minto
 - [ ] Write better pubkey-to-(github|bitbucket) script
 
+## Things to look at
+
+* https://github.com/jasoncodes/dotfiles/blob/master/config/inputrc
+* https://github.com/foobacca/dotfiles/blob/master/tmux/save-buffer-history
+* http://blog.sensible.io/2014/05/09/supercharge-your-vim-into-ide-with-ctags.html
+
 [fresh]: http://freshshell.com
 [powerline]: https://github.com/powerline/powerline
 [inconsolata]: http://levien.com/type/myfonts/inconsolata.html
