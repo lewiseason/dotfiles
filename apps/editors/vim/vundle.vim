@@ -3,6 +3,7 @@ Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-bundler'
 Bundle 'tpope/vim-endwise'
 Plugin 'editorconfig/editorconfig-vim'
+Plugin 'PreserveNoEOL'
 
 " Wrappers
 Bundle 'tpope/vim-tbone'
