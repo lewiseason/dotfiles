@@ -70,7 +70,6 @@ fresh fonts                --file=~/.fonts/
 fresh git@bitbucket.org:lewiseason/ssh_config.git \* --file=~/.ssh/config --filter="perl -0 -pe 's/\nHost (.*)\nHostname (.*)\n/\nHost \1 \2\nHostname \2\n/g'"
 
 fresh config/redshift.conf --file=~/.config/redshift.conf
-fresh config/terminator    --file=~/.config/terminator/config
 
 fresh config/powerline-symbols.conf --file=~/.config/fontconfig/conf.d/10-powerline-symbols.conf
 fresh config/powerline-tmux.json    --file=~/.config/powerline/themes/tmux/default.json
