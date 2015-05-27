@@ -1,0 +1,3 @@
+#!/bin/sh
+
+exec `whereis -b python | tr ' ' '\n' | grep -E -m1 'bin.*3[0-9\.]+$'` $@
