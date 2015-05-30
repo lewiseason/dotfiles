@@ -1,0 +1,8 @@
+root = /home/$USER
+root = ssh://leason@bute.eason.io//home/leason/backup/home
+
+path = .keys
+ignore = Name *.kdb.lock
+
+# Ideas: thunderbird
+# Per-machine? gpg/ssh

@@ -74,6 +74,8 @@ fresh config/redshift.conf --file=~/.config/redshift.conf
 fresh config/powerline-symbols.conf --file=~/.config/fontconfig/conf.d/10-powerline-symbols.conf
 fresh config/powerline-tmux.json    --file=~/.config/powerline/themes/tmux/default.json
 
+fresh config/unison_home.prf        --file=~/.unison/home.prf --filter='sed "s/\$USER/$USER/g"'
+
 # ln -sf ~/.dotfiles/foo ~/.config/foo
 
 fresh_after_build() {
