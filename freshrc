@@ -45,8 +45,10 @@ each_in_path() {
 # sublime text 3
 each_in_path "apps/editors/st3" "~/.config/sublime-text-3/Packages/User"
 
-# konsole
+# konsole (kde4)
 each_in_path "apps/terminals/konsole" "~/.kde/share/apps/konsole"
+# konsole (kde5)
+each_in_path "apps/terminals/konsole" "~/.local/share/konsole"
 
 # bash
 fresh-options --file=~/.bashrc
