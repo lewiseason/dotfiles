@@ -1,5 +1,4 @@
 set nocompatible
-set background=dark
 
 if !has('win32') && !has('win64')
   set term=$TERM
