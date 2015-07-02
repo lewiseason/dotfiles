@@ -70,7 +70,7 @@ fresh fonts                --file=~/.fonts/
 
 # SSH Config
 # Pull all the files in the repo, concatenate them and then append the "Hostname" to each "Host"
-fresh git@bitbucket.org:lewiseason/ssh_config.git \* --file=~/.ssh/config --filter="perl -0 -pe 's/\nHost (.*)\nHostname (.*)\n/\nHost \1 \2\nHostname \2\n/g'"
+fresh git@bitbucket.org:lewiseason/ssh_config.git \* --file=~/.ssh/config --filter="perl -0 -pe 's/\nHost ([^\s]*)\nHostname (.*)\n/\nHost \1 \2\nHostname \2\n/g'"
 
 fresh config/redshift.conf --file=~/.config/redshift.conf
 
