@@ -1,16 +1,8 @@
 {
   "segments": {
-    "left": [
-      {
-        "function": "powerline.segments.tmux.attached_clients",
-        "args": {
-          "minimum": 2
-        }
-      }
-    ],
     "right": [
       {
-        "function": "powerline.segments.common.players.clementine",
+        "function": "powerline.segments.common.players.spotify",
         "name": "player",
         "args": {
           "format": "{state_symbol}"
@@ -21,11 +13,8 @@
       },
       {
         "function": "powerline.segments.common.time.date",
-        "name": "time",
-        "priority": 50,
         "args": {
-          "format": "%H:%M ",
-          "istime": true
+          "format": "%H:%M"
         }
       },
       {
