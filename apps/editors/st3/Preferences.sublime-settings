@@ -20,5 +20,6 @@
 	"tab_size": 2,
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
-	"use_tab_stops": false
+	"use_tab_stops": false,
+	"folder_exclude_patterns": [".svn", ".git", ".hg", "CVS", "__pycache__"]
 }
