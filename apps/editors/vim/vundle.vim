@@ -5,6 +5,9 @@ Bundle 'tpope/vim-endwise'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'PreserveNoEOL'
 
+Plugin 'tpope/vim-speeddating'
+Plugin 'jceb/vim-orgmode'
+
 " Wrappers
 Bundle 'tpope/vim-tbone'
 Bundle 'tpope/vim-fugitive'
