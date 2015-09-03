@@ -2,6 +2,8 @@
 Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-bundler'
 Bundle 'tpope/vim-endwise'
+Bundle 'tpope/vim-git'
+
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'PreserveNoEOL'
 
@@ -15,6 +17,7 @@ Bundle 'tpope/vim-fugitive'
 " Theming
 Bundle 'altercation/vim-colors-solarized'
 
+" Misc
 Bundle 'xolox/vim-misc'
 Bundle 'xolox/vim-notes'
 
