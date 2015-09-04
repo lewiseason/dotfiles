@@ -30,9 +30,9 @@ background_color = #FFFFFF 100
 border_color = #FFFFFF 8
 
 # Panel
-panel_monitor = LVDS
+panel_monitor = all
 panel_position = bottom left horizontal
-panel_size = 100% 20
+panel_size = 100% 16
 wm_menu = 1
 panel_background_id = 0
 
@@ -46,7 +46,7 @@ urgent_nb_of_blink = 7
 task_icon = 0
 task_text = 1
 task_centered = 1
-task_maximum_size = 0 32
+#task_maximum_size = 0 20
 task_background_id = 4
 task_active_background_id = 1
 task_urgent_background_id = 0
@@ -64,7 +64,7 @@ font_shadow = 0
 systray = 1
 systray_sort = ascending
 systray_background_id = 4
-systray_icon_size = 18
+systray_icon_size = 12
 systray_icon_asb = 100 -90 -15
 
 # Clock
