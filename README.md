@@ -12,11 +12,17 @@ FRESH_LOCAL_SOURCE=lewiseason/dotfiles bash <(\curl -sL get.freshshell.com)
 
 ## Requirements/Suggestions
 
+It is probably sufficient to install the following packages:
+
 * [keychain]
 * git
 * tmux
+* [powerline]
 * [urlview]
 * konsole
+* xclip
+* perl
+* sensible-utils
 
 ## Notes
 
@@ -36,8 +42,7 @@ to take effect.
 
 ## Things to do
 
-- [ ] Have a look in ~/bin on skye/minto
-- [ ] Write better pubkey-to-(github|bitbucket) script
+- [x] Write better pubkey-to-(github|bitbucket) script
 
 ## Things to look at
 

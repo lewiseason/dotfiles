@@ -1,4 +1,0 @@
-{
-  "cmd": ["pdflatex", "$file_name"],
-  "selector": "text.tex.latex"
-}

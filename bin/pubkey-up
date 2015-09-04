@@ -1,0 +1,67 @@
+#!/usr/bin/env python
+# coding=utf-8
+
+from __future__ import print_function
+import urllib, os, getpass
+import json
+
+services = {
+  'bitbucket': {
+    'url': 'https://{username}:{password}@api.bitbucket.org/1.0/users/{username}/ssh-keys',
+    'data': {
+      'label': '{hostname}',
+      'key': '{key}',
+      'accountname': '{username}',
+    },
+    'transform': lambda payload: urllib.urlencode(payload)
+  },
+  'github': {
+    'url': 'https://{username}:{password}@api.github.com/user/keys',
+    'data': {
+      'title': '{hostname}',
+      'key': '{key}',
+    },
+    'transform': lambda payload: json.dumps(payload)
+  }
+}
+
+input = vars(__builtins__).get('raw_input',input)
+
+def ask(ask_for, default=None, hidden=False):
+  tail = ' [%s]' % default if default else ''
+  if not hidden:
+    val = input("%s%s: " % (ask_for, tail))
+  else:
+    val = getpass.getpass("%s: " % ask_for)
+
+  return val if val != "" else default
+
+SERVICE  = ask('Service (%s)' % '|'.join(services.keys()))
+FILENAME = os.path.expanduser(ask('Key file', '~/.ssh/id_rsa.pub'))
+USERNAME = ask('Username', 'lewiseason')
+PASSWORD = ask('Password', '', hidden=True)
+
+service = services.get(SERVICE)
+
+variables = {
+  'username': USERNAME,
+  'password': PASSWORD,
+  'filename': FILENAME,
+  'hostname': os.uname()[1],
+  'key': open(FILENAME, 'r').read(),
+}
+
+url = service['url'].format(**variables)
+payload = { k: v.format(**variables) for k, v in service['data'].items() }
+
+if service.get('transform'):
+  payload = service.get('transform')(payload)
+
+rep = urllib.urlopen(url, payload)
+
+if rep.code in range(200, 208):
+  print('Key imported successfully')
+else:
+  print('Something went wrong:')
+  print('%s %s' % (rep.code, rep.read()))
+

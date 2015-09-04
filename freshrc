@@ -1,5 +1,5 @@
 # Keep fresh up to date
-fresh freshshell/fresh bin/fresh  --bin
+fresh freshshell/fresh bin/fresh --bin
 
 # We use FRESH_LOCAL to find the ~/.dotfiles directory,
 # in case it's somewhere else - so populate it if blank
@@ -8,10 +8,10 @@ FRESH_LOCAL=${FRESH_LOCAL-~/.dotfiles}
 cd $FRESH_LOCAL
 
 # ~/. files
-fresh rc/\*      --file
+fresh rc/\*   --file
 
 # scripts
-fresh bin/\*     --bin
+fresh bin/\*  --bin
 
 # generic shell
 fresh shell/aliases/\*
@@ -46,8 +46,6 @@ each_in_path() {
 # sublime text 3
 each_in_path "apps/editors/st3" "~/.config/sublime-text-3/Packages/User"
 
-# konsole (kde4)
-each_in_path "apps/terminals/konsole" "~/.kde/share/apps/konsole"
 # konsole (kde5)
 each_in_path "apps/terminals/konsole" "~/.local/share/konsole"
 
@@ -77,7 +75,7 @@ fresh config/redshift.conf --file=~/.config/redshift.conf
 fresh config/powerline-symbols.conf --file=~/.config/fontconfig/conf.d/10-powerline-symbols.conf
 fresh config/powerline-tmux.json    --file=~/.config/powerline/themes/tmux/default.json
 
-fresh config/unison_home.prf        --file=~/.unison/home.prf --filter='sed "s/\$USER/$USER/g"'
+fresh config/unison_home.prf --file=~/.unison/home.prf --filter='sed "s/\$USER/$USER/g"'
 
 # ln -sf ~/.dotfiles/foo ~/.config/foo
 

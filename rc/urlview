@@ -1,1 +1,1 @@
-COMMAND /usr/bin/google-chrome
+COMMAND /bin/sensible-browser
