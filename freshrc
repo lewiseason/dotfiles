@@ -49,6 +49,10 @@ each_in_path "apps/editors/st3" "~/.config/sublime-text-3/Packages/User"
 # konsole (kde5)
 each_in_path "apps/terminals/konsole" "~/.local/share/konsole"
 
+# openbox
+each_in_path "apps/wm/openbox" "~/.config/openbox"
+fresh apps/wm/config/tint2rc --file=~/.config/tint2/tint2rc
+
 # bash
 fresh-options --file=~/.bashrc
   fresh freshshell/fresh contrib/source-build.sh
