@@ -52,6 +52,7 @@ each_in_path "apps/terminals/konsole" "~/.local/share/konsole"
 # openbox
 each_in_path "apps/wm/openbox" "~/.config/openbox"
 fresh apps/wm/config/tint2rc --file=~/.config/tint2/tint2rc
+fresh apps/wm/config/sxhkdrc --file=~/.config/sxhkd/sxhkdrc
 
 # bash
 fresh-options --file=~/.bashrc

@@ -1,0 +1,19 @@
+# Launch applications
+ctrl + space
+ dmenu_run -b -i
+
+ctrl + alt + t
+ konsole
+
+ctrl + alt + w
+ sensible-browser
+
+# Window Snapping
+super + {Left,Right,Up}
+ snap.sh {left,right,max}
+
+super + {Insert,Home,Delete,End}
+ snap.sh {nw,ne,sw,se}
+
+super + {Prior,Next}
+ snap.sh {top,bottom}
