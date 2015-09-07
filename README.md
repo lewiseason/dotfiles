@@ -48,6 +48,8 @@ to take effect.
 
 - [x] Write better pubkey-to-(github|bitbucket) script
 - [ ] Media keys (brightness, volume, screenshot?)
+- [ ] Power manager? (xfce4-power-manager?)
+- [ ] Clipboard manager
 
 ## Things to look at
 

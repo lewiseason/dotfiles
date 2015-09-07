@@ -16,5 +16,3 @@ else
   (sleep 3 && ~/bin/wallpaper && nitrogen ~/Pictures/wallpaper) &
 fi
 
-# xfce4-power-manager
-# clipboard manager
