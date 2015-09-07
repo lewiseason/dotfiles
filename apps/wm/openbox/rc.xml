@@ -434,6 +434,25 @@
     <mousebind button="A-S-Down" action="Click">
       <action name="SendToDesktop"><to>next</to></action>
     </mousebind>
+
+    <mousebind button="W-Up" action="Click">
+      <action name="Execute">
+        <command>amixer sset Master,0 1%+</command>
+      </action>
+    </mousebind>
+
+    <mousebind button="W-Down" action="Click">
+      <action name="Execute">
+        <command>amixer sset Master,0 1%-</command>
+      </action>
+    </mousebind>
+
+    <mousebind button="W-Middle" action="Click">
+      <action name="Execute">
+        <command>amixer sset Master,0 toggle</command>
+      </action>
+    </mousebind>
+
   </context>
 
   <context name="Titlebar">
