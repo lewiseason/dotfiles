@@ -8,7 +8,7 @@ sxhkd &
 (sleep 1 && dunst) &
 
 # Desktop background
-if [ -f "~/.config/nitrogen/bg-saved.cfg" ]; then
+if [ -f "$HOME/.config/nitrogen/bg-saved.cfg" ]; then
   # Nitrogen config exists - restore it
   (sleep 1 && nitrogen --restore) &
 else
