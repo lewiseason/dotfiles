@@ -2,19 +2,10 @@
   "segments": {
     "right": [
       {
-        "function": "powerline.segments.common.players.spotify",
+        "function": "powerline.segments.common.players.dbus_player",
         "name": "player",
         "args": {
           "format": "{state_symbol}"
-        }
-      },
-      {
-        "function": "powerline.segments.common.bat.battery"
-      },
-      {
-        "function": "powerline.segments.common.time.date",
-        "args": {
-          "format": "%H:%M"
         }
       },
       {
