@@ -7,13 +7,3 @@ ctrl + alt + t
 
 ctrl + alt + w
  sensible-browser
-
-# Window Snapping
-super + {Left,Right,Up}
- snap.sh {left,right,max}
-
-super + {Insert,Home,Delete,End}
- snap.sh {nw,ne,sw,se}
-
-super + {Prior,Next}
- snap.sh {top,bottom}
