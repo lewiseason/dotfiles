@@ -26,6 +26,10 @@ It is probably sufficient to install the following packages:
 
 ## Notes
 
+Dismiss notification: `Ctrl+Space`
+Dismiss all: `Ctrl+Shift+Space`
+Recall last: `Ctrl+Backtick`
+
 ### Fonts
 
 After installing new fonts, it might be necessary
