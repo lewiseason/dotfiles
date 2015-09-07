@@ -7,6 +7,9 @@ sxhkd &
 # Notifications
 (sleep 1 && dunst) &
 
+# Volume Control
+(sleep 3 && volumeicon) &
+
 # Desktop background
 if [ -f "$HOME/.config/nitrogen/bg-saved.cfg" ]; then
   # Nitrogen config exists - restore it
