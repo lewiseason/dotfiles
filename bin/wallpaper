@@ -1,0 +1,11 @@
+#!/bin/sh
+
+mkdir -p ~/Pictures/wallpaper
+cd ~/Pictures/wallpaper
+
+_wallpaper() {
+  wget --quiet --no-clobber "$1"
+}
+
+_wallpaper http://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-158763.jpg
+

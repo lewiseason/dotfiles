@@ -92,4 +92,6 @@ fresh config/unison_home.prf --file=~/.unison/home.prf --filter='sed "s/\$USER/$
 
 fresh_after_build() {
   fc-cache ~/.fonts
+  # Download any new wallpapers
+  ~/bin/wallpaper &
 }
