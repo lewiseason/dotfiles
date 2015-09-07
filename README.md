@@ -43,6 +43,7 @@ to take effect.
 ## Things to do
 
 - [x] Write better pubkey-to-(github|bitbucket) script
+- [ ] Media keys (brightness, volume, screenshot?)
 
 ## Things to look at
 
