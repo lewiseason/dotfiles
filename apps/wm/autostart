@@ -1,0 +1,19 @@
+tint2 &
+sxhkd &
+
+(sleep 3 && nm-applet) &
+
+if [ -f "~/.config/nitrogen/bg-saved.cfg" ]; then
+  # Nitrogen config exists - restore it
+  (sleep 1 && nitrogen --restore) &
+else
+  # Nitrogen not configured yet
+  (sleep 3 && ~/bin/wallpaper && nitrogen ~/Pictures/wallpaper) &
+fi
+
+# xfce4-power-manager
+# synclient
+# volume control
+# clipboard manager
+# notifications
+

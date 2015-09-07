@@ -51,6 +51,8 @@ each_in_path "apps/terminals/konsole" "~/.local/share/konsole"
 
 # openbox
 each_in_path "apps/wm/openbox" "~/.config/openbox"
+fresh apps/wm/autostart --bin=~/.config/openbox/autostart
+
 fresh apps/wm/config/tint2rc --file=~/.config/tint2/tint2rc
 fresh apps/wm/config/sxhkdrc --file=~/.config/sxhkd/sxhkdrc
 
