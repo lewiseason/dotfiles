@@ -7,3 +7,6 @@ ctrl + alt + t
 
 ctrl + alt + w
  sensible-browser
+
+ctrl + alt + l
+ i3lock -d -c 000000
