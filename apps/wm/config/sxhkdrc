@@ -1,5 +1,5 @@
 # Launch applications
-ctrl + space
+super + space
  dmenu_run -b -i
 
 ctrl + alt + t
