@@ -38,16 +38,13 @@ info "Installing dependencies"
 sudo dnf -q -y install git ansible
 
 info "Fetching pubkey-up script"
-wget -q -nc -O "$PUBKEY_UP" "https://raw.githubusercontent.com/lewiseason/dotfiles/master/bin/pubkey-up"
+wget -q -O "$PUBKEY_UP" "https://raw.githubusercontent.com/lewiseason/dotfiles/master/bin/pubkey-up"
 chmod +x "$PUBKEY_UP"
 
 for service in $($PUBKEY_UP --list-services); do
   info "Upload public key to $service (^C to skip)"
-  $PUBKEY_UP $service
+  $PUBKEY_UP $service "${SSH_KEY}.pub"
 done
-
-info "Configuring system with ansible (this may take some time)"
-ansible-pull -U "$ANSIBLE_REPOSITORY"
 
 info "Attempting to run \`fresh\`"
 

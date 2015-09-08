@@ -52,6 +52,10 @@ to take effect.
 - [ ] Clipboard manager
 - [x] `~/.config/konsolerc`
 - [ ] konsole solarized light isn't really cutting it
+- [ ] The way bootstrap.sh adds keys to services with pubkey-up is horrible.
+      pubkey-up in general is also horrible now that it makes the assumptions
+      required for this to work (5c629455, 014bd995).
+>>>>>>> Tidy bootstrap slightly
 
 ## Things to look at
 
