@@ -46,8 +46,9 @@ each_in_path() {
 # sublime text 3
 each_in_path "apps/editors/st3" "~/.config/sublime-text-3/Packages/User"
 
-# konsole (kde5)
+# konsole
 each_in_path "apps/terminals/konsole" "~/.local/share/konsole"
+each_in_path "apps/terminals/konsole" "~/.kde/share/apps/konsole"
 
 # openbox
 each_in_path "apps/wm/openbox" "~/.config/openbox"
