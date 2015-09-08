@@ -38,17 +38,18 @@ def ask(ask_for, default=None, hidden=False):
 
 if len(sys.argv) == 1:
   SERVICE  = ask('Service (%s)' % '|'.join(services.keys()))
+  FILENAME = os.path.expanduser(ask('Key file', '~/.ssh/id_rsa.pub'))
 elif len(sys.argv) == 2:
   if sys.argv[1] == '--list-services':
     print("\n".join(services.keys()))
     sys.exit(0)
   elif sys.argv[1] == '--help':
-    print("Usage:\n  {invocation}\n  {invocation} <service-name>\n  {invocation} --list-services".format(invocation=sys.argv[0]))
+    print("Usage:\n  {invocation}\n  {invocation} <service-name> <pubkey-path>\n  {invocation} --list-services".format(invocation=sys.argv[0]))
     sys.exit(1)
-  else:
-    SERVICE = sys.argv[1]
+elif len(sys.argv) == 3:
+  SERVICE = sys.argv[1]
+  FILENAME = sys.argv[2]
 
-FILENAME = os.path.expanduser(ask('Key file', '~/.ssh/id_rsa.pub'))
 USERNAME = ask('Username', 'lewiseason')
 PASSWORD = ask('Password', '', hidden=True)
 
