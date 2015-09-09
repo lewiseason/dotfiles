@@ -10,3 +10,21 @@ ctrl + alt + w
 
 ctrl + alt + l
  i3lock -d -c 000000
+
+# Volume
+super + button{4,5,2}
+  amixer -q sset Master,0 {1%+,1%-,toggle}
+
+XF86Audio{RaiseVolume,LowerVolume,Mute}
+  amixer -q sset Master,0 {1%+,1%-,toggle}
+
+# Screen Brightness
+ctrl + super + button{5,4}
+  xbacklight -{dec,inc} 5 -time 80
+
+XF86MonBrightness{Down,Up}
+  xbacklight -{dec,inc} 5 -time 80
+
+# Screenshot
+Print
+  notify-send "Take a screenshot"

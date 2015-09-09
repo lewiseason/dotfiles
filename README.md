@@ -47,7 +47,8 @@ to take effect.
 ## Things to do
 
 - [x] Write better pubkey-to-(github|bitbucket) script
-- [ ] Media keys (brightness, volume, screenshot?)
+- [x] Media keys (brightness, volume)
+- [ ] Screenshot
 - [ ] Power manager? (xfce4-power-manager?)
 - [ ] Clipboard manager
 
