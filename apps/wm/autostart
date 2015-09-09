@@ -1,9 +1,6 @@
 tint2 &
 sxhkd &
 
-# Network Manager Icon
-(sleep 3 && nm-applet) &
-
 # Notifications
 (sleep 1 && dunst) &
 
