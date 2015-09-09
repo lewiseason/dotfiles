@@ -53,6 +53,7 @@ each_in_path "apps/terminals/konsole" "~/.kde/share/apps/konsole"
 # openbox
 each_in_path "apps/wm/openbox" "~/.config/openbox"
 fresh apps/wm/autostart --bin=~/.config/openbox/autostart
+fresh apps/wm/environment --bin=~/.config/openbox/environment
 
 fresh apps/wm/config/tint2rc --file=~/.config/tint2/tint2rc
 fresh apps/wm/config/sxhkdrc --file=~/.config/sxhkd/sxhkdrc
