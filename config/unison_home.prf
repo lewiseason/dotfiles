@@ -1,10 +1,10 @@
 root = /home/$USER
 root = ssh://leason@bute.eason.io//home/leason/backup/home
 
+path = .gnupg
+
 path = .keys
 ignore = Name *.kdb.lock
 
 path = .cert
 
-# Ideas: thunderbird
-# Per-machine? gpg/ssh
