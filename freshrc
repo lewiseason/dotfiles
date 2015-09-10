@@ -17,6 +17,9 @@ fresh bin/\*  --bin
 fresh shell/aliases/\*
 fresh shell/config/\*
 
+# Use google to evaluate expressions
+fresh pengwynn/dotfiles bin/gxpr --bin
+
 # vim
 fresh-options --file=~/.vimrc --marker=\"
   fresh twe4ked/dotfiles vim/vundle_before.vim
