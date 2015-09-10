@@ -7,5 +7,7 @@ ignore = Name *.gpg-agent
 path = .keys
 ignore = Name *.kdb.lock
 
+path = .password-store
+
 path = .cert
 
