@@ -14,6 +14,12 @@ Plugin 'jceb/vim-orgmode'
 Bundle 'tpope/vim-tbone'
 Bundle 'tpope/vim-fugitive'
 
+" Ctrl + P
+Bundle 'kien/ctrlp.vim'
+
+" Version Control
+Bundle 'airblade/vim-gitgutter'
+
 " Theming
 Bundle 'altercation/vim-colors-solarized'
 

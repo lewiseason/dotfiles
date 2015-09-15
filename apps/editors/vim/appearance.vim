@@ -8,6 +8,10 @@ set showmode
 " Observe modelines in files
 set modelines=1
 
+" Update git gutter when I stop typing
+let g:gitgutter_realtime = 1
+set updatetime=200
+
 " Theming
 syntax enable
 let g:solarized_termcolors=256
