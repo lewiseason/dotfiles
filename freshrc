@@ -51,7 +51,8 @@ fresh config/konsolerc --file=~/.config/konsolerc
 # I don't care if local changes are discarded
 chmod u+w ~/.config/konsolerc
 each_in_path "apps/terminals/konsole" "~/.local/share/konsole"
-each_in_path "apps/terminals/konsole" "~/.kde/share/apps/konsole"
+# For an old version of konsole/kde
+#each_in_path "apps/terminals/konsole" "~/.kde/share/apps/konsole"
 
 # openbox
 each_in_path "apps/wm/openbox" "~/.config/openbox"
@@ -81,6 +82,9 @@ fresh-options --file=~/.zshrc
 fresh-options
 
 # fonts
+# TODO: Perhaps we should have a go at downloading and extracting the fonts instead.
+# eg: https://github.com/adobe-fonts/source-code-pro/archive/2.010R-ro/1.030R-it.tar.gz
+# (downloading the latest version might be better?)
 fresh fonts                --file=~/.fonts/
 
 # SSH Config
