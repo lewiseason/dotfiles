@@ -48,8 +48,6 @@ each_in_path "apps/editors/st3" "~/.config/sublime-text-3/Packages/User"
 
 # konsole
 fresh config/konsolerc --file=~/.config/konsolerc
-# I don't care if local changes are discarded
-chmod u+w ~/.config/konsolerc
 each_in_path "apps/terminals/konsole" "~/.local/share/konsole"
 # For an old version of konsole/kde
 #each_in_path "apps/terminals/konsole" "~/.kde/share/apps/konsole"
@@ -102,6 +100,10 @@ fresh config/unison_home.prf --file=~/.unison/home.prf --filter='sed "s/\$USER/$
 
 fresh_after_build() {
   fc-cache ~/.fonts
+
   # Download any new wallpapers
   ~/bin/wallpaper &
+
+  # Stop konsole from moaning
+  chmod u+w ~/.config/konsolerc
 }
