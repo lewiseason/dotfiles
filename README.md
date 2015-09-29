@@ -51,6 +51,7 @@ to take effect.
 - [ ] Screenshot
 - [ ] Power manager? (xfce4-power-manager?)
 - [ ] Clipboard manager
+- [ ] `~/.config/konsolerc`
 
 ## Things to look at
 
