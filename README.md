@@ -17,7 +17,6 @@ It is probably sufficient to install the following packages:
 * [keychain]
 * git
 * tmux
-* [powerline]
 * [urlview]
 * konsole
 * xclip
