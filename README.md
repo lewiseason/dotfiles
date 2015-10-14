@@ -51,6 +51,7 @@ to take effect.
 - [ ] Power manager? (xfce4-power-manager?)
 - [ ] Clipboard manager
 - [x] `~/.config/konsolerc`
+- [ ] konsole solarized light isn't really cutting it
 
 ## Things to look at
 
