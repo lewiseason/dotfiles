@@ -11,6 +11,10 @@ ctrl + alt + w
 ctrl + alt + l
  i3lock -d -c 000000
 
+# toggle tint2
+ctrl + super + space
+ pgrep -U $UID tint2 && pkill tint2 || (tint2 &)
+
 # Volume
 super + button{4,5,2}
   amixer -q sset Master,0 {1%+,1%-,toggle}

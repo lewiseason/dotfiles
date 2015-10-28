@@ -26,16 +26,16 @@
 </focus>
 
 <placement>
-  <policy>Smart</policy>
+  <policy>UnderMouse</policy>
   <!-- 'Smart' or 'UnderMouse' -->
   <center>yes</center>
   <!-- whether to place windows in the center of the free area found or
        the top left corner -->
-  <monitor>Primary</monitor>
+  <monitor>Mouse</monitor>
   <!-- with Smart placement on a multi-monitor system, try to place new windows
        on: 'Any' - any monitor, 'Mouse' - where the mouse is, 'Active' - where
        the active window is, 'Primary' - only on the primary monitor -->
-  <primaryMonitor>1</primaryMonitor>
+  <primaryMonitor>Mouse</primaryMonitor>
   <!-- The monitor where Openbox should place popup dialogs such as the
        focus cycling popup, or the desktop switch popup.  It can be an index
        from 1, specifying a particular monitor.  Or it can be one of the
@@ -160,7 +160,7 @@
      cases. -->
 <margins>
   <top>0</top>
-  <bottom>16</bottom>
+  <bottom>0</bottom>
   <left>0</left>
   <right>0</right>
 </margins>
@@ -189,7 +189,15 @@
 
   <!-- Window snapping -->
   <keybind key="W-Up">
-    <action name="ToggleMaximize"></action>
+    <action name="MoveResizeTo">
+      <x>0</x>
+      <y>0</y>
+      <width>100%</width>
+      <height>100%</height>
+    </action>
+    <action name="ResizeRelative">
+      <bottom>-16</bottom>
+    </action>
   </keybind>
 
   <keybind key="W-Left">
@@ -200,6 +208,9 @@
       <width>50%</width>
       <height>100%</height>
     </action>
+    <action name="ResizeRelative">
+      <bottom>-16</bottom>
+    </action>
   </keybind>
 
   <keybind key="W-Right">
@@ -209,6 +220,19 @@
       <y>0</y>
       <width>50%</width>
       <height>100%</height>
+    </action>
+    <action name="ResizeRelative">
+      <bottom>-16</bottom>
+    </action>
+  </keybind>
+
+  <keybind key="W-Down">
+    <action name="Unmaximize" />
+    <action name="MoveResizeTo">
+      <x>25%</x>
+      <y>25%</y>
+      <width>50%</width>
+      <height>50%</height>
     </action>
   </keybind>
 
@@ -229,6 +253,9 @@
       <y>70%</y>
       <width>100%</width>
       <height>30%</height>
+    </action>
+    <action name="ResizeRelative">
+      <bottom>-16</bottom>
     </action>
   </keybind>
 
@@ -260,6 +287,9 @@
       <width>50%</width>
       <height>50%</height>
     </action>
+    <action name="ResizeRelative">
+      <bottom>-16</bottom>
+    </action>
   </keybind>
 
   <keybind key="W-End">
@@ -270,6 +300,9 @@
       <width>50%</width>
       <height>50%</height>
     </action>
+    <action name="ResizeRelative">
+      <bottom>-16</bottom>
+    </action>
   </keybind>
 
   <!-- Desktop Switching -->
@@ -279,23 +312,11 @@
   <keybind key="C-A-Right">
     <action name="GoToDesktop"><to>right</to><wrap>yes</wrap></action>
   </keybind>
-  <keybind key="C-A-Up">
-    <action name="GoToDesktop"><to>up</to><wrap>yes</wrap></action>
-  </keybind>
-  <keybind key="C-A-Down">
-    <action name="GoToDesktop"><to>down</to><wrap>yes</wrap></action>
-  </keybind>
-  <keybind key="S-A-Left">
+  <keybind key="C-S-A-Left">
     <action name="SendToDesktop"><to>left</to><wrap>yes</wrap></action>
   </keybind>
-  <keybind key="S-A-Right">
+  <keybind key="C-S-A-Right">
     <action name="SendToDesktop"><to>right</to><wrap>yes</wrap></action>
-  </keybind>
-  <keybind key="S-A-Up">
-    <action name="SendToDesktop"><to>up</to><wrap>yes</wrap></action>
-  </keybind>
-  <keybind key="S-A-Down">
-    <action name="SendToDesktop"><to>down</to><wrap>yes</wrap></action>
   </keybind>
   <keybind key="W-1">
     <action name="GoToDesktop"><to>1</to></action>
@@ -313,14 +334,22 @@
     <action name="ToggleShowDesktop"/>
   </keybind>
 
+  <!-- Monitor Switching -->
+  <keybind key="W-k">
+    <action name="MoveResizeTo">
+      <monitor>next</monitor>
+    </action>
+  </keybind>
+
+  <keybind key="W-l">
+    <action name="MoveResizeTo">
+      <monitor>prev</monitor>
+    </action>
+  </keybind>
+
   <!-- Keybindings for windows -->
   <keybind key="A-F4">
     <action name="Close"/>
-  </keybind>
-  <keybind key="A-Escape">
-    <action name="Lower"/>
-    <action name="FocusToBottom"/>
-    <action name="Unfocus"/>
   </keybind>
   <keybind key="A-space">
     <action name="ShowMenu"><menu>client-menu</menu></action>

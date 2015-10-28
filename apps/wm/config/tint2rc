@@ -36,6 +36,7 @@ panel_size = 100% 16
 wm_menu = 1
 panel_background_id = 0
 panel_layer = top
+strut_policy = none
 
 # Taskbar
 taskbar_mode = single_desktop
