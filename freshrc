@@ -64,6 +64,8 @@ fresh apps/wm/config/dunstrc --file=~/.config/dunst/dunstrc
 # wmutils/contrib
 fresh wmutils/contrib \*.sh --bin
 
+# upload screenshot to imgur
+fresh jomo/imgur-screenshot imgur-screenshot.sh --bin
 
 # bash
 fresh-options --file=~/.bashrc

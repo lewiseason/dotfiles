@@ -31,4 +31,7 @@ XF86MonBrightness{Down,Up}
 
 # Screenshot
 Print
-  notify-send "Take a screenshot"
+  cd ~/Pictures; scrot -m -d2 && notify-send "Screenshot saved in ~/Pictures"
+
+alt + Print
+  notify-send "Upload screenshot to imgur" "Click to select window\nDrag to select region"; imgur-screenshot.sh
