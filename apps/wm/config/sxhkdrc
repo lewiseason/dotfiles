@@ -17,10 +17,10 @@ ctrl + super + space
 
 # Volume
 super + button{4,5,2}
-  amixer -q sset Master,0 {1%+,1%-,toggle}
+  amixer -q sset Master,0 {5%+,5%-,toggle}
 
 XF86Audio{RaiseVolume,LowerVolume,Mute}
-  amixer -q sset Master,0 {1%+,1%-,toggle}
+  amixer -q sset Master,0 {5%+,5%-,toggle}
 
 # Screen Brightness
 ctrl + super + button{5,4}
