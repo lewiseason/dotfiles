@@ -1,8 +1,8 @@
 [Desktop Entry]
-DefaultProfile=Shell.profile
+DefaultProfile=Light.profile
 
 [Favorite Profiles]
-Favorites=Shell.profile
+Favorites=Light.profile,Dark.profile
 
 [KonsoleWindow]
 ShowMenuBarByDefault=false
