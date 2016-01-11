@@ -38,6 +38,11 @@
 [color]
   ui = true
 
+[sendemail]
+  smtpserver = "mail.eason.io"
+  smtpuser = "leason"
+  smtpencryption = "tls"
+
 [url "git@github.com"]
   # So you can `git clone github:foo/bar`
   insteadOf = "github"
