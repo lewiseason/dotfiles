@@ -14,3 +14,15 @@ indent_size = 4
 
 [*.{md,markdown}]
 trim_trailing_whitespace = false
+
+[Makefile]
+indent_style = tab
+
+[*.spec]
+indent_style = tab
+indent_size = 8
+
+[projects/linux/**.{c,h}]
+indent_style = tab
+indent_size = 8
+
