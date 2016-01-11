@@ -3,6 +3,7 @@ Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-bundler'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-git'
+Bundle 'junegunn/limelight.vim'
 
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'PreserveNoEOL'
