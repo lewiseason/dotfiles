@@ -93,8 +93,6 @@ fresh git@bitbucket.org:lewiseason/ssh_config.git \* --file=~/.ssh/config --filt
 
 fresh config/redshift.conf --file=~/.config/redshift.conf
 
-fresh config/powerline-symbols.conf --file=~/.config/fontconfig/conf.d/10-powerline-symbols.conf
-
 fresh config/unison_home.prf --file=~/.unison/home.prf --filter='sed "s/\$USER/$USER/g"'
 
 # ln -sf ~/.dotfiles/foo ~/.config/foo
