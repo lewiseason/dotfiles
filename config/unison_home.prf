@@ -11,3 +11,5 @@ path = .password-store
 
 path = .cert
 
+path = .vpn
+
