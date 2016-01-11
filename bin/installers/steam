@@ -1,5 +1,0 @@
-#!/bin/bash
-
-sudo yum-config-manager --add-repo=http://negativo17.org/repos/fedora-steam.repo
-sudo yum localinstall --nogpgcheck http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-stable.noarch.rpm http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-stable.noarch.rpm
-sudo yum install steam
