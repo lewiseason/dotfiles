@@ -1,0 +1,8 @@
+[auth]
+password-stores = gpg-agent,gnome-keyring,kwallet
+
+[helpers]
+[tunnels]
+[miscellany]
+[auto-props]
+[working-copy]

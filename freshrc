@@ -98,6 +98,8 @@ fresh config/redshift.conf --file=~/.config/redshift.conf
 
 fresh config/unison_home.prf --file=~/.unison/home.prf --filter='sed "s/\$USER/$USER/g"'
 
+fresh config/subversion --file=~/.subversion/conf
+
 # ln -sf ~/.dotfiles/foo ~/.config/foo
 
 fresh_after_build() {
