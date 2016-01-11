@@ -1,0 +1,17 @@
+! Hard-code the numeric keypad keys as if numlock is always on
+keycode 79 = 7
+keycode 80 = 8
+keycode 81 = 9
+keycode 83 = 4
+keycode 84 = 5
+keycode 85 = 6
+keycode 87 = 1
+keycode 88 = 2
+keycode 89 = 3
+keycode 90 = 0
+keycode 91 = period
+keycode 86 = plus
+
+! deactivate Num_Lock key since we don't need it now.
+keycode 77 =
+
