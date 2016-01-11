@@ -1,7 +1,13 @@
-export EDITOR='vim'
-export PAGER='less -SFXiMR'
-export BROWSER='google-chrome:chromium-browser:firefox:lynx:elinks'
+EDITOR='vim'
+PAGER='less -SFXiMR'
+BROWSER='google-chrome:chromium-browser:firefox:lynx:elinks'
 
-export LANG='en_GB.UTF-8'
+LANG='en_GB.UTF-8'
 
-export PATH=$PATH:~/bin
+PATH=$PATH:~/bin:node_modules/.bin
+PATH=$(uniquePath)
+
+LS_COLORS=
+
+export EDITOR PAGER BROWSER LANG PATH LS_COLORS
+
