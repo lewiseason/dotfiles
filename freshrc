@@ -24,12 +24,12 @@ fresh-options --file=~/.vimrc --marker=\"
   fresh twe4ked/dotfiles vim/vundle_after.vim
 
   fresh apps/editors/vim/global.vim
-  fresh apps/editors/vim/syntax.vim
   fresh apps/editors/vim/appearance.vim
   fresh apps/editors/vim/indent.vim
   fresh apps/editors/vim/search.vim
 
   fresh apps/editors/vim/keys.vim
+  fresh apps/editors/vim/syntax.vim
 fresh-options
 
 each_in_path() {
