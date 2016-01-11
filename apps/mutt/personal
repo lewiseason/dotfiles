@@ -1,0 +1,27 @@
+# Identity
+set realname="Lewis Eason"
+set from = "me@lewiseason.co.uk"
+alternates "lewis@eason.io|lewis@mercuric.co.uk|lewis@tardis.ed.ac.uk"
+
+# Recieve
+set folder = "imaps://leason@mail.eason.io/"
+set spoolfile = +INBOX
+
+# Send
+set smtp_url = "smtps://leason@mail.eason.io:465/"
+set ssl_force_tls = yes
+
+# Copies and Folders
+set my_outbox="+"
+set my_drafts="=Drafts"
+set my_archives="=Archives"
+set my_spam="=Spam/Train/Spam"
+
+# Common Settings
+source ~/.mutt/common
+
+# Mailing Lists
+subscribe edlan-announce.mlist.is.ed.ac.uk
+subscribe mailman.lists.fedoraproject.org
+subscribe mailman.centos.org
+subscribe kernel-janitors.vger.kernel.org

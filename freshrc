@@ -52,6 +52,9 @@ each_in_path "apps/terminals/konsole" "~/.local/share/konsole"
 # For an old version of konsole/kde
 #each_in_path "apps/terminals/konsole" "~/.kde/share/apps/konsole"
 
+# mutt
+each_in_path "apps/mutt" "~/.mutt"
+
 # openbox
 each_in_path "apps/wm/openbox" "~/.config/openbox"
 fresh apps/wm/autostart --bin=~/.config/openbox/autostart

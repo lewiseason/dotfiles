@@ -1,0 +1,23 @@
+# Identity
+set realname="Lewis Eason"
+set from = "lewis.eason@red61.com"
+alternates "lewis.eason@edfringe.com|techsupport@red61.com|root@red61.com"
+
+# Receive
+set folder = "imaps://lewis.eason@mail.red61.com/"
+set spoolfile = +INBOX
+
+# Send
+set smtp_url = "smtp://lewis.eason@mail.red61.com:587/"
+set ssl_starttls = yes
+set ssl_force_tls = yes
+set smtp_authenticators = "gssapi:login"
+
+# Copies and Folders
+set my_outbox="+"
+set my_drafts="=INBOX/Drafts"
+set my_archives="=INBOX/Archives"
+set my_spam="=INBOX/Trash"
+
+# Common Settings
+source ~/.mutt/common

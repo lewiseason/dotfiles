@@ -1,0 +1,53 @@
+# Threading/Sorting
+set sort="threads"
+set sort_aux="reverse-date"
+set strict_threads="yes"
+
+# Identity
+set use_from=yes
+set reverse_name
+
+# MIME
+auto_view text/html
+alternative_order text/enriched text/plain text/html
+
+# Copies and Folders
+set record="$my_outbox"
+set postponed="$my_drafts"
+set mask=""
+
+# Bindings
+bind index "^" imap-fetch-mail
+# Archive current/tagged messages to "Archives/$x" where $x is the current year
+macro index A ":set confirmappend=no\n<tag-prefix><save-message>$my_archives/`date +%Y`\n:set confirmappend=yes\n"
+
+macro index S ":set confirmappend=no\n<tag-prefix><save-message>$my_spam\n:set confirmappend=yes\n"
+
+# Headers
+my_hdr X-Clacks-Overhead: GNU Terry Pratchett
+
+# UI
+set index_format="%4C %Z │ %{%b %d} │ %-15.15L │ %s"
+set pager_stop="yes"
+
+# Mailing Lists
+lists linux-kernel@vger.kernel.org
+
+# Colors
+color error         red             default
+color markers       red             black                           # eg: '+' line break
+color status        brightwhite     white
+color indicator     black           green                           # eg: current selection
+color signature     blue            default
+
+color index         blue            default     "~U"                # Unread
+color index         black           blue        "~T"                # Flagged
+color index         black           red         "~D"                # Deleted
+
+color hdrdefault    default         default
+color header        blue            default     "^(From|Subject)"
+color quoted        blue            default
+color quoted1       yellow          default
+color quoted2       red             default
+color quoted3       blue            default
+color quoted4       yellow          default
