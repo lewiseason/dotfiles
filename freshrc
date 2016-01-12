@@ -20,16 +20,16 @@ fresh shell/config/\*
 # vim
 fresh-options --file=~/.vimrc --marker=\"
   fresh twe4ked/dotfiles vim/vundle_before.vim
-  fresh apps/editors/vim/vundle.vim
+  fresh apps/vim/vundle.vim
   fresh twe4ked/dotfiles vim/vundle_after.vim
 
-  fresh apps/editors/vim/global.vim
-  fresh apps/editors/vim/appearance.vim
-  fresh apps/editors/vim/indent.vim
-  fresh apps/editors/vim/search.vim
+  fresh apps/vim/global.vim
+  fresh apps/vim/appearance.vim
+  fresh apps/vim/indent.vim
+  fresh apps/vim/search.vim
 
-  fresh apps/editors/vim/keys.vim
-  fresh apps/editors/vim/syntax.vim
+  fresh apps/vim/keys.vim
+  fresh apps/vim/syntax.vim
 fresh-options
 
 each_in_path() {
@@ -44,25 +44,25 @@ each_in_path() {
 }
 
 # sublime text 3
-each_in_path "apps/editors/st3" "~/.config/sublime-text-3/Packages/User"
+each_in_path "apps/st3" "~/.config/sublime-text-3/Packages/User"
 
 # konsole
 fresh config/konsolerc --file=~/.config/konsolerc
-each_in_path "apps/terminals/konsole" "~/.local/share/konsole"
+each_in_path "apps/konsole" "~/.local/share/konsole"
 # For an old version of konsole/kde
-#each_in_path "apps/terminals/konsole" "~/.kde/share/apps/konsole"
+#each_in_path "apps/konsole" "~/.kde/share/apps/konsole"
 
 # mutt
 each_in_path "apps/mutt" "~/.mutt"
 
 # openbox
-each_in_path "apps/wm/openbox" "~/.config/openbox"
-fresh apps/wm/autostart --bin=~/.config/openbox/autostart
-fresh apps/wm/environment --bin=~/.config/openbox/environment
+each_in_path "apps/openbox" "~/.config/openbox"
+fresh config/autostart --bin=~/.config/openbox/autostart
+fresh config/environment --bin=~/.config/openbox/environment
 
-fresh apps/wm/config/tint2rc --file=~/.config/tint2/tint2rc
-fresh apps/wm/config/sxhkdrc --file=~/.config/sxhkd/sxhkdrc
-fresh apps/wm/config/dunstrc --file=~/.config/dunst/dunstrc
+fresh config/tint2rc --file=~/.config/tint2/tint2rc
+fresh config/sxhkdrc --file=~/.config/sxhkd/sxhkdrc
+fresh config/dunstrc --file=~/.config/dunst/dunstrc
 
 # wmutils/contrib
 fresh wmutils/contrib \*.sh --bin

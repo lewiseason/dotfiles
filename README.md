@@ -52,7 +52,7 @@ Applications will need to be restarted for this update to take effect.
       required for this to work (5c629455, 014bd995).
 - [ ] ~/.signature. This requires knowing what pc we're on
 - [x] mutt config(s)
-- [ ] make directory structure more consistent. I often have to `find` things
+- [x] make directory structure more consistent. I often have to `find` things
 
 ## Things to do that wouldn't actually end up in this repo
 
