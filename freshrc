@@ -1,11 +1,12 @@
-# Keep fresh up to date
-fresh freshshell/fresh bin/fresh --bin
-
 # We use FRESH_LOCAL to find the ~/.dotfiles directory,
 # in case it's somewhere else - so populate it if blank
 FRESH_LOCAL=${FRESH_LOCAL-~/.dotfiles}
+cd ${FRESH_LOCAL}
 
-cd $FRESH_LOCAL
+source "${FRESH_LOCAL}/shell/fresh/functions.sh"
+
+# Keep fresh up to date
+fresh freshshell/fresh bin/fresh --bin
 
 # ~/. files
 fresh rc/\*   --file
@@ -34,17 +35,6 @@ fresh-options --file=~/.vimrc --marker=\"
   fresh apps/vim/keys.vim
   fresh apps/vim/syntax.vim
 fresh-options
-
-each_in_path() {
-  # Fresh each file in the source directory
-  # to one with the same name in the destination directory.
-  #   $1  source directory
-  #   $2  destination directory
-  find "$1" -type f -print0 | while IFS= read -r -d $'\0' path; do
-    file=`basename "$path"`
-    fresh "$path" --file="$2/$file"
-  done
-}
 
 # sublime text 3
 each_in_path "apps/st3" "~/.config/sublime-text-3/Packages/User"
@@ -83,15 +73,14 @@ fresh-options
 # zsh
 fresh-options --file=~/.zshrc
   fresh freshshell/fresh contrib/source-build.sh
-  fresh freshshell/fresh contrib/completion/fresh-completion.zsh
   fresh shell/zsh/\*
 fresh-options
 
-# fonts
-# TODO: Perhaps we should have a go at downloading and extracting the fonts instead.
-# eg: https://github.com/adobe-fonts/source-code-pro/archive/2.010R-ro/1.030R-it.tar.gz
-# (downloading the latest version might be better?)
-fresh fonts                --file=~/.fonts/
+fresh-options --file=shell.zsh
+  fresh freshshell/fresh contrib/completion/fresh-completion.zsh
+fresh-options
+
+fresh tarjoilija/zgen zgen.zsh --file=zgen.zsh
 
 # SSH Config
 # Pull all the files in the repo, concatenate them and then append the "Hostname" to each "Host"
@@ -106,7 +95,7 @@ fresh config/subversion --file=~/.subversion/conf
 # ln -sf ~/.dotfiles/foo ~/.config/foo
 
 fresh_after_build() {
-  fc-cache ~/.fonts
+  conditionally_clear_zgen_cache
 
   # Download any new wallpapers
   ~/bin/wallpaper &

@@ -23,3 +23,4 @@ ScrollFullPage=true
 
 [Terminal Features]
 BlinkingCursorEnabled=false
+FlowControlEnabled=false

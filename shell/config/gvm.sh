@@ -1,3 +1,3 @@
-# Load if it exists
-# Local
-[[ -s "$HOME/.gvm/scripts/gvm" ]] && . "$HOME/.gvm/scripts/gvm"
+if [ -x "$HOME/.gvm/scripts/gvm" ]; then
+  (set +m; source "$HOME/.gvm/scripts/gvm" &)
+fi
