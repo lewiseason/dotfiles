@@ -1,0 +1,6 @@
+#!/bin/sh
+
+NID=$(curl -s 'http://support.red61.com/api/instances.php' | awk -F: "/^$1/ {print \$3}")
+
+echo -ne "NID:\t$NID\n"
+echo -ne "TelnetAppender:\t$((2300+$NID))\n"
