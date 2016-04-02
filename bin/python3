@@ -1,5 +1,2 @@
 #!/bin/sh
-echo $0
-echo ${BASH_SOURCE[0]}
-exit
 exec `whereis -b python | tr ' ' '\n' | grep -E -m1 'bin.*3[0-9\.]+$'` $@
