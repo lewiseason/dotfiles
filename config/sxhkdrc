@@ -36,7 +36,7 @@ XF86MonBrightness{Down,Up}
   xbacklight -{dec,inc} 5 -time 80
 
 # Screenshot
-Print
+ctrl + shift + Print
   cd ~/Pictures; scrot -m -d2 && notify-send "Screenshot saved in ~/Pictures"
 
 alt + Print
