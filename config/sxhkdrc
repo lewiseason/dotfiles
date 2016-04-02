@@ -2,6 +2,12 @@
 super + space
  dmenu_run -b -i
 
+super + p
+ pass-dmenu -b -x clipboard -s ~/.password-store/Red61
+
+super + s
+ screenlayout-dmenu -b
+
 ctrl + alt + t
  konsole
 

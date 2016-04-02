@@ -60,6 +60,9 @@ fresh config/dunstrc --file=~/.config/dunst/dunstrc
 # wmutils/contrib
 fresh wmutils/contrib \*.sh --bin
 
+# dmenu for pass
+fresh klaasb/passdmenu passdmenu.py --bin=~/bin/pass-dmenu
+
 # upload screenshot to imgur
 fresh jomo/imgur-screenshot imgur-screenshot.sh --bin
 

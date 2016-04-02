@@ -1,0 +1,8 @@
+#!/bin/sh
+set -e
+
+# Exec the appropriate screenlayout script in ~/.screenlayout.
+# Any arguments passed in are passed to dmenu.
+
+LAYOUT=$(ls -1 ~/.screenlayout | sed 's/\.sh$//g' | dmenu $@)
+exec ~/.screenlayout/${LAYOUT}.sh
