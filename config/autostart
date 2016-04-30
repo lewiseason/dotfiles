@@ -7,12 +7,3 @@ sxhkd &
 # Volume Control
 (sleep 3 && volumeicon) &
 
-# Desktop background
-if [ -f "$HOME/.config/nitrogen/bg-saved.cfg" ]; then
-  # Nitrogen config exists - restore it
-  (sleep 1 && nitrogen --restore) &
-else
-  # Nitrogen not configured yet
-  (sleep 3 && ~/bin/wallpaper && nitrogen ~/Pictures/wallpaper) &
-fi
-

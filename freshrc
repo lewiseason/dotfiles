@@ -100,9 +100,6 @@ fresh config/subversion --file=~/.subversion/conf
 fresh_after_build() {
   conditionally_clear_zgen_cache
 
-  # Download any new wallpapers
-  ~/bin/wallpaper &
-
   # Stop konsole from moaning
   chmod u+w ~/.config/konsolerc
 }
