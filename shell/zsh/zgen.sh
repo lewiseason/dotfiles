@@ -1,10 +1,7 @@
 if ! zgen saved; then
-  zgen oh-my-zsh
-
-  zgen oh-my-zsh lib
+  zgen oh-my-zsh oh-my-zsh.sh
 
   zgen oh-my-zsh plugins/git
-  zgen oh-my-zsh plugins/git-extras
 
   zgen load zsh-users/zsh-completions src
   zgen load horosgrisa/autoenv

@@ -14,10 +14,10 @@ esac
 
 export SESSION_TYPE
 
-case $0 in
+case $(basename $SHELL) in
   *zsh*) SESSION_SHELL=zsh;;
   bash) SESSION_SHELL=bash;;
-  *) SESSION_SHELL=$0;;
+  *) SESSION_SHELL=$(basename $SHELL);;
 esac
 
 export SESSION_SHELL
