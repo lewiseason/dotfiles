@@ -35,6 +35,7 @@ Just make sure `curl` is installed.
 - [ ] ~/.signature. This requires knowing what pc we're on
 - [x] mutt config(s)
 - [x] make directory structure more consistent. I often have to `find` things
+- [ ] suspend (`dbus-send --print-reply --system --dest=org.freedesktop.login1 /org/freedesktop/login1 org.freedesktop.login1.Manager.Suspend boolean:true`). Screen locking?
 
 ## Things to do that wouldn't actually end up in this repo
 

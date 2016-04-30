@@ -1,6 +1,6 @@
 EDITOR='vim'
 PAGER='less -SFXiMR'
-BROWSER='google-chrome:chromium-browser:firefox:lynx:elinks'
+BROWSER='chromium-browser:google-chrome:firefox:lynx:elinks'
 
 LANG='en_GB.UTF-8'
 LS_COLORS=
