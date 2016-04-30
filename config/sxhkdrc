@@ -15,11 +15,7 @@ ctrl + alt + w
  sensible-browser
 
 ctrl + alt + l
- i3lock -d -c 000000
-
-# toggle tint2
-ctrl + super + space
- pgrep -U $UID tint2 && pkill tint2 || (tint2 &)
+ xautolock -locknow
 
 # Volume
 super + button{4,5,2}

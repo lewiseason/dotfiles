@@ -7,3 +7,4 @@ sxhkd &
 # Volume Control
 (sleep 3 && volumeicon) &
 
+xautolock -time 30 -locker 'i3lock -c 000000' -detectsleep &
