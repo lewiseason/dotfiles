@@ -14,33 +14,15 @@ FRESH_LOCAL_SOURCE=lewiseason/dotfiles bash <(\curl -sL get.freshshell.com)
 
 ~~It is probably sufficient to install the following packages:~~
 
-It is no longer sufficient to install the following packages:
+It is no longer sufficient to install the previously listed packages,
+but Ansible will take care of this for the most part.
 
-*(but the list in ansible probably includes most of the required ones)*
-
-* [keychain]
-* git
-* tmux
-* [urlview]
-* konsole
-* xclip
-* perl
-* sensible-utils
-
-### Fonts
-
-After installing new fonts, it might be necessary to rebuild the cache. Fresh
-does this automatically using the `after_build` hook, but this won't always
-force a run. Do so manually with: `fc-cache -rv`
-
-Applications will need to be restarted for this update to take effect.
-
-* [inconsolata] is released under the Open Font License.
-* [source code pro] is released under the Open Font License.
+Just make sure `curl` is installed.
 
 ## Things to do
 
 - [x] Write better pubkey-to-(github|bitbucket) script
+- [ ] gitlab support
 - [x] Media keys (brightness, volume)
 - [x] Screenshot
 - [ ] Power manager? (xfce4-power-manager?)
@@ -65,7 +47,3 @@ Applications will need to be restarted for this update to take effect.
 * http://blog.sensible.io/2014/05/09/supercharge-your-vim-into-ide-with-ctags.html
 
 [fresh]: http://freshshell.com
-[inconsolata]: http://levien.com/type/myfonts/inconsolata.html
-[source code pro]: https://github.com/adobe-fonts/source-code-pro
-[keychain]: http://www.funtoo.org/Keychain
-[urlview]: https://github.com/sigpipe/urlview
