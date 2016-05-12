@@ -5,3 +5,7 @@
 # Python
 __pycache__/
 *.py[cod]
+
+# Autoenv
+.env
+.out
