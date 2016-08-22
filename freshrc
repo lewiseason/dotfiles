@@ -43,7 +43,7 @@ each_in_path "apps/st3" "~/.config/sublime-text-3/Packages/User"
 fresh config/konsolerc --file=~/.config/konsolerc
 each_in_path "apps/konsole" "~/.local/share/konsole"
 # For an old version of konsole/kde
-#each_in_path "apps/konsole" "~/.kde/share/apps/konsole"
+each_in_path "apps/konsole" "~/.kde/share/apps/konsole"
 
 # mutt
 each_in_path "apps/mutt" "~/.mutt"
@@ -56,9 +56,6 @@ fresh config/environment --bin=~/.config/openbox/environment
 fresh config/tint2rc --file=~/.config/tint2/tint2rc
 fresh config/sxhkdrc --file=~/.config/sxhkd/sxhkdrc
 fresh config/dunstrc --file=~/.config/dunst/dunstrc
-
-# wmutils/contrib
-fresh wmutils/contrib \*.sh --bin
 
 # dmenu for pass
 fresh klaasb/passdmenu passdmenu.py --bin=~/bin/pass-dmenu
@@ -94,6 +91,8 @@ fresh config/redshift.conf --file=~/.config/redshift.conf
 fresh config/unison_home.prf --file=~/.unison/home.prf --filter='sed "s/\$USER/$USER/g"'
 
 fresh config/subversion --file=~/.subversion/conf
+
+fresh config/via.properties --file=~/via.properties
 
 # ln -sf ~/.dotfiles/foo ~/.config/foo
 
