@@ -70,7 +70,7 @@ systray_icon_size = 12
 systray_icon_asb = 100 -90 -15
 
 # Clock
-time1_format = %H:%M:%S
+time1_format = %a %d %b %H:%M:%S
 time1_font = Diavlo 8
 clock_font_color = #FFFFFF 100
 clock_tooltip = %A %d %B
