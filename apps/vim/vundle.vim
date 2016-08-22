@@ -21,6 +21,9 @@ Bundle 'kien/ctrlp.vim'
 " Version Control
 Bundle 'airblade/vim-gitgutter'
 
+" Building
+Bundle 'tpope/vim-dispatch'
+
 " Theming
 Bundle 'altercation/vim-colors-solarized'
 
