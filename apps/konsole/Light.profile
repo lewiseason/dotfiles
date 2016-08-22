@@ -13,6 +13,9 @@ Name=Light
 Parent=FALLBACK/
 ShowTerminalSizeHint=false
 
+[Interaction Options]
+TrimTrailingSpacesInSelectedText=true
+
 [Keyboard]
 KeyBindings=Lewis
 
@@ -23,4 +26,5 @@ ScrollFullPage=true
 
 [Terminal Features]
 BlinkingCursorEnabled=false
+BlinkingTextEnabled=false
 FlowControlEnabled=false

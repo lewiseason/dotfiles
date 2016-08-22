@@ -1,72 +1,72 @@
 # --- special colors ---
 
 [Background]
-Color=255,255,255
+Color=252,253,254
 
 [BackgroundIntense]
-Color=255,255,255
+Color=252,253,254
 
 [Foreground]
-Color=55,59,65
+Color=81,82,83
 
 [ForegroundIntense]
-Color=55,59,65
+Color=81,82,83
 Bold=true
 
 # --- standard colors ---
 
 [Color0]
-Color=29,31,33
+Color=12,13,14
 
 [Color0Intense]
-Color=150,152,150
+Color=115,116,117
 
 [Color1]
-Color=204,102,102
+Color=227,26,28
 
 [Color1Intense]
-Color=204,102,102
+Color=227,26,28
 
 [Color2]
-Color=181,189,104
+Color=49,163,84
 
 [Color2Intense]
-Color=181,189,104
+Color=49,163,84
 
 [Color3]
-Color=240,198,116
+Color=220,160,96
 
 [Color3Intense]
-Color=240,198,116
+Color=220,160,96
 
 [Color4]
-Color=129,162,190
+Color=49,130,189
 
 [Color4Intense]
-Color=129,162,190
+Color=49,130,189
 
 [Color5]
-Color=178,148,187
+Color=117,107,177
 
 [Color5Intense]
-Color=178,148,187
+Color=117,107,177
 
 [Color6]
-Color=138,190,183
+Color=128,177,211
 
 [Color6Intense]
-Color=138,190,183
+Color=128,177,211
 
 [Color7]
-Color=197,200,198
+Color=183,184,185
 
 [Color7Intense]
-Color=255,255,255
+Color=252,253,254
 
 # --- general options ---
 
 [General]
-Description=Tomorrow Light
+Description=terminal.sexy
 Opacity=1
 Wallpaper=
 
