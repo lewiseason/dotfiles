@@ -9,9 +9,4 @@ ignore = Name S.*
 path = .keys
 ignore = Name *.kdb.lock
 
-path = .password-store
-
-path = .cert
-
-path = .vpn
-
+path = .id

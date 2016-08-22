@@ -15,7 +15,10 @@ ctrl + alt + w
  sensible-browser
 
 ctrl + alt + l
- xautolock -locknow
+ i3lock -d -c 000000
+
+ctrl + F12
+ date >> ~/.distfile
 
 # Volume
 super + button{4,5,2}

@@ -6,7 +6,9 @@ MAILTO=me@lewiseason.co.uk
 LANG='en_GB.UTF-8'
 LS_COLORS=
 
+AUTOSSH_POLL=10
+
 pathAppend ~/bin
 pathAppend node_modules/.bin
 
-export EDITOR PAGER BROWSER LANG PATH LS_COLORS
+export EDITOR PAGER BROWSER LANG PATH LS_COLORS AUTOSSH_POLL

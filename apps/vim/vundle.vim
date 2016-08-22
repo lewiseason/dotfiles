@@ -15,8 +15,12 @@ Plugin 'jceb/vim-orgmode'
 Bundle 'tpope/vim-tbone'
 Bundle 'tpope/vim-fugitive'
 
-" Ctrl + P
-Bundle 'kien/ctrlp.vim'
+" File Opening
+Bundle 'ctrlpvim/ctrlp.vim'
+Bundle 'scrooloose/nerdtree'
+
+" Completion
+Bundle 'Valloric/YouCompleteMe'
 
 " Version Control
 Bundle 'airblade/vim-gitgutter'
