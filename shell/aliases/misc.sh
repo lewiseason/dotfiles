@@ -1,3 +1,5 @@
+alias p='cd $(find ~/projects -maxdepth 1 -type d | selecta)'
+
 alias ssh='TERM=xterm-256color ssh'
 
 alias bell='echo -en "\007"'
