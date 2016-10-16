@@ -17,12 +17,6 @@
        under the mouse pointer. when followMouse is enabled -->
   <underMouse>no</underMouse>
   <!-- move focus under the mouse, even when the mouse is not moving -->
-  <focusDelay>200</focusDelay>
-  <!-- when followMouse is enabled, the mouse must be inside the window for
-       this many milliseconds (1000 = 1 sec) before moving focus to it -->
-  <raiseOnFocus>no</raiseOnFocus>
-  <!-- when followMouse is enabled, and a window is given focus by moving the
-       mouse into it, also raise the window -->
 </focus>
 
 <placement>
@@ -56,7 +50,7 @@
       S: shade (roll up/down)
       D: omnipresent (on all desktops).
   -->
-  <keepBorder>yes</keepBorder>
+  <keepBorder>no</keepBorder>
   <animateIconify>no</animateIconify>
   <font place="ActiveWindow">
     <name>sans</name>
@@ -236,46 +230,29 @@
     </action>
   </keybind>
 
-  <keybind key="W-Prior">
+  <keybind key="W-Insert">
     <action name="Unmaximize" />
     <action name="MoveResizeTo">
       <x>0</x>
       <y>0</y>
-      <width>100%</width>
-      <height>30%</height>
-    </action>
-  </keybind>
-
-  <keybind key="W-Next">
-    <action name="Unmaximize" />
-    <action name="MoveResizeTo">
-      <x>0</x>
-      <y>70%</y>
-      <width>100%</width>
-      <height>30%</height>
+      <width>33%</width>
+      <height>100%</height>
     </action>
     <action name="ResizeRelative">
       <bottom>-16</bottom>
     </action>
   </keybind>
 
-  <keybind key="W-Insert">
-    <action name="Unmaximize" />
-    <action name="MoveResizeTo">
-      <x>0</x>
-      <y>0</y>
-      <width>50%</width>
-      <height>50%</height>
-    </action>
-  </keybind>
-
   <keybind key="W-Home">
     <action name="Unmaximize" />
     <action name="MoveResizeTo">
-      <x>50%</x>
+      <x>33%</x>
       <y>0</y>
-      <width>50%</width>
-      <height>50%</height>
+      <width>67%</width>
+      <height>100%</height>
+    </action>
+    <action name="ResizeRelative">
+      <bottom>-16</bottom>
     </action>
   </keybind>
 
@@ -283,9 +260,9 @@
     <action name="Unmaximize" />
     <action name="MoveResizeTo">
       <x>0</x>
-      <y>50%</y>
-      <width>50%</width>
-      <height>50%</height>
+      <y>0</y>
+      <width>67%</width>
+      <height>100%</height>
     </action>
     <action name="ResizeRelative">
       <bottom>-16</bottom>
@@ -295,10 +272,10 @@
   <keybind key="W-End">
     <action name="Unmaximize" />
     <action name="MoveResizeTo">
-      <x>50%</x>
-      <y>50%</y>
-      <width>50%</width>
-      <height>50%</height>
+      <x>67%</x>
+      <y>0</y>
+      <width>32%</width>
+      <height>100%</height>
     </action>
     <action name="ResizeRelative">
       <bottom>-16</bottom>
@@ -335,15 +312,15 @@
   </keybind>
 
   <!-- Monitor Switching -->
-  <keybind key="W-k">
+  <keybind key="W-Prior">
     <action name="MoveResizeTo">
-      <monitor>next</monitor>
+      <monitor>prev</monitor>
     </action>
   </keybind>
 
-  <keybind key="W-l">
+  <keybind key="W-Next">
     <action name="MoveResizeTo">
-      <monitor>prev</monitor>
+      <monitor>next</monitor>
     </action>
   </keybind>
 
@@ -368,34 +345,6 @@
 
   <keybind key="A-S-Tab">
     <action name="PreviousWindow">
-      <finalactions>
-        <action name="Focus"/>
-        <action name="Raise"/>
-        <action name="Unshade"/>
-      </finalactions>
-    </action>
-  </keybind>
-
-  <keybind key="W-j">
-    <action name="PreviousWindow">
-      <raise>yes</raise>
-      <interactive>no</interactive>
-      <linear>yes</linear>
-
-      <finalactions>
-        <action name="Focus"/>
-        <action name="Raise"/>
-        <action name="Unshade"/>
-      </finalactions>
-    </action>
-  </keybind>
-
-  <keybind key="W-semicolon">
-    <action name="NextWindow">
-      <raise>yes</raise>
-      <interactive>no</interactive>
-      <linear>yes</linear>
-
       <finalactions>
         <action name="Focus"/>
         <action name="Raise"/>

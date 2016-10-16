@@ -20,6 +20,9 @@
   git = !git
   extstatus = status --porcelain -u
 
+  # Pretty logging (use -p to specify a path)
+  lg = log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'\n--abbrev-commit --date=relative
+
   # For use with semver/semver2/yavm gem
   semtag = !git tag -a $(version tag) -m \"Version $(version)\"
   semcommit = !git add $(version files) && git commit -m \"Version `version`\" && git semtag

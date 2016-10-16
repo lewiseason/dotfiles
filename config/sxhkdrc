@@ -9,16 +9,19 @@ super + s
  screenlayout-dmenu -b
 
 ctrl + alt + t
- konsole
+ wmctrl -xa urxvt || urxvt
+
+ctrl + alt + shift + t
+ urxvt
 
 ctrl + alt + w
+ wmctrl -xa google-chrome || sensible-browser
+
+ctrl + alt + shift + w
  sensible-browser
 
 ctrl + alt + l
  i3lock -d -c 000000
-
-ctrl + F12
- date >> ~/.distfile
 
 # Volume
 super + button{4,5,2}
