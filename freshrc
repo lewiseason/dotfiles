@@ -29,9 +29,9 @@ fresh pengwynn/dotfiles bin/gxpr --bin
 
 # vim
 fresh-options --file=~/.vimrc --marker=\"
-  fresh twe4ked/dotfiles vim/vundle_before.vim
+  fresh apps/vim/vundle_before.vim
   fresh apps/vim/vundle.vim
-  fresh twe4ked/dotfiles vim/vundle_after.vim
+  fresh apps/vim/vundle_after.vim
 
   fresh apps/vim/global.vim
   fresh apps/vim/appearance.vim
