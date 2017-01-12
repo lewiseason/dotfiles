@@ -4,3 +4,4 @@ NID=$(curl -s 'http://support.red61.com/api/instances.php' | awk -F: "/^$1/ {pri
 
 echo -ne "NID:\t$NID\n"
 echo -ne "TelnetAppender:\t$((2300+$NID))\n"
+echo -ne "CrossSelling:\t$((7200+$NID))\n"
