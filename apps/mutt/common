@@ -33,6 +33,17 @@ set pager_stop="yes"
 # Mailing Lists
 lists linux-kernel@vger.kernel.org
 
+# Sidebar
+set sidebar_visible
+set sidebar_format = "%B%?F? [%F]?%* %?N?%N/?%S"
+set mail_check_stats
+set imap_list_subscribed
+set imap_check_subscribed
+set sidebar_delim_chars = "/."
+set sidebar_short_path
+set sidebar_folder_indent
+set sidebar_divider_char = "│"
+
 # Colors
 color error         red             default
 color markers       red             black                           # eg: '+' line break
