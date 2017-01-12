@@ -11,7 +11,7 @@ URxvt*loginShell: true
 XTerm*TrimSelection: true
 
 ! Appearance
-URxvt.font: xft:Monospace:size=10
+URxvt.font: xft:Monospace:size=8
 URxvt.cursorColor: LightGreen
 URxvt*scrollBar: false
 
