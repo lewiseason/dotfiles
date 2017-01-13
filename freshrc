@@ -12,6 +12,10 @@ fresh freshshell/fresh bin/fresh --bin
 # ~/. files
 fresh rc/\*   --file
 
+# file manager bookmarks
+fresh config/gtk-bookmarks --file=~/.config/gtk-3.0/bookmarks
+fresh config/gtk-bookmarks --file=~/.gtk-bookmarks
+
 # urxvt extensions
 fresh majutsushi/urxvt-font-size font-size --file=~/.urxvt/ext/font-size
 fresh muennich/urxvt-perls deprecated/clipboard --file=~/.urxvt/ext/clipboard
@@ -79,7 +83,7 @@ fresh tarjoilija/zgen zgen.zsh --file=zgen.zsh
 
 # SSH Config
 # Pull all the files in the repo, concatenate them and then append the "Hostname" to each "Host"
-fresh git@bitbucket.org:lewiseason/ssh_config.git \* --file=~/.ssh/config --filter="perl -0 -pe 's/\nHost ([^\s]*)\nHostname (.*)\n/\nHost \1 \2\nHostname \2\n/g'"
+#fresh git@bitbucket.org:lewiseason/ssh_config.git \* --file=~/.ssh/config --filter="perl -0 -pe 's/\nHost ([^\s]*)\nHostname (.*)\n/\nHost \1 \2\nHostname \2\n/g'"
 
 fresh config/redshift.conf --file=~/.config/redshift.conf
 
@@ -93,7 +97,4 @@ fresh config/via.properties --file=~/via.properties
 
 fresh_after_build() {
   conditionally_clear_zgen_cache
-
-  # Stop konsole from moaning
-  chmod u+w ~/.config/konsolerc
 }
