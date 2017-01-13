@@ -1,9 +1,9 @@
-# Launch applications
+# dmenus
 super + space
  dmenu_run -b -i
 
 super + p
- pass-dmenu -b -x clipboard -s ~/.password-store/Red61
+ pass-dmenu -b -x clipboard -f '^(?!Old)'
 
 super + s
  screenlayout-dmenu -b
