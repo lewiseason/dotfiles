@@ -1,7 +1,7 @@
 root = /home/$USER
 root = ssh://leason@bute.eason.io//home/leason/backup/home
 
-logfile = /home/$USER/.unison.log
+logfile = /home/$USER/.unison/log
 
 path = .gnupg
 ignore = Name S.*
