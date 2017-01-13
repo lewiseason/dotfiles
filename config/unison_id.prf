@@ -1,0 +1,20 @@
+root = /home/$USER
+root = ssh://leason@bute.eason.io//home/leason/id
+
+path = .ssh
+ignore = Name known_hosts
+ignore = Name authorized_keys
+ignore = Name id_rsa
+ignore = Name id_rsa.pub
+
+path = .gnupg
+ignore = Name S.*
+ignore = Name *~
+ignore = Name .#*
+
+path = .password-store
+
+path = .cert
+
+path = .signature
+
