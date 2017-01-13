@@ -28,6 +28,10 @@ Bundle 'airblade/vim-gitgutter'
 " Building
 Bundle 'tpope/vim-dispatch'
 
+" Syntax
+Bundle 'eiginn/iptables-vim'
+Bundle 'chase/vim-ansible-yaml'
+
 " Theming
 Bundle 'altercation/vim-colors-solarized'
 
