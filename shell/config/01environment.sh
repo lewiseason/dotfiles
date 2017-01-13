@@ -8,7 +8,7 @@ LS_COLORS=
 
 AUTOSSH_POLL=10
 
-pathAppend ~/bin
+pathPrepend ~/bin
 pathAppend node_modules/.bin
 
 export EDITOR PAGER BROWSER LANG PATH LS_COLORS AUTOSSH_POLL
