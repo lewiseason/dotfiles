@@ -8,18 +8,27 @@ super + p
 super + s
  screenlayout-dmenu -b
 
+# Terminal
+F2
+ wmctrl -xa urxvt || urxvr
+
 ctrl + alt + t
  wmctrl -xa urxvt || urxvt
 
 ctrl + alt + shift + t
  urxvt
 
+# Web Browser
+F3
+ wmctrl -xa google-chrome || google-chrome
+
 ctrl + alt + w
- wmctrl -xa google-chrome || sensible-browser
+ wmctrl -xa google-chrome || google-chrome
 
 ctrl + alt + shift + w
- sensible-browser
+ google-chrome
 
+# Screen Locker
 ctrl + alt + l
  i3lock -d -c 000000
 
@@ -30,19 +39,16 @@ super + button{4,5,2}
 XF86Audio{RaiseVolume,LowerVolume,Mute}
   amixer -q sset Master,0 {5%+,5%-,toggle}
 
-super + {Print,Scroll_Lock,Pause}
- amixer -q sset Master,0 {5%-,5%+,toggle}
-
 # Screen Brightness
 ctrl + super + button{5,4}
-  xbacklight -{dec,inc} 5 -time 80
+ xbacklight -{dec,inc} 10 -steps 1
 
 XF86MonBrightness{Down,Up}
-  xbacklight -{dec,inc} 5 -time 80
+ xbacklight -{dec,inc} 10 -steps 1
 
 # Screenshot
-ctrl + shift + Print
-  cd ~/Pictures; scrot -m -d2 && notify-send "Screenshot saved in ~/Pictures"
+ctrl + Print
+ cd ~/Pictures && scrot -sm
 
 alt + Print
-  notify-send -t 1000 -u low "Upload screenshot to imgur" "Click to select window\nDrag to select region"; imgur-screenshot.sh
+ imgur-screenshot.sh
