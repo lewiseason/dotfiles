@@ -6,11 +6,13 @@ ignore = Name known_hosts
 ignore = Name authorized_keys
 ignore = Name id_rsa
 ignore = Name id_rsa.pub
+ignore = Name config
 
 path = .gnupg
 ignore = Name S.*
 ignore = Name *~
 ignore = Name .#*
+ignore = Name random_seed
 
 path = .password-store
 
