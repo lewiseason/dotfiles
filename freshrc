@@ -14,7 +14,7 @@ fresh rc/\*   --file
 
 # urxvt extensions
 fresh majutsushi/urxvt-font-size font-size --file=~/.urxvt/ext/font-size
-fresh muennich/urxvt-perls clipboard --file=~/.urxvt/ext/clipboard
+fresh muennich/urxvt-perls deprecated/clipboard --file=~/.urxvt/ext/clipboard
 fresh effigies/urxvt-perl fullscreen --file=~/.urxvt/ext/fullscreen
 
 # scripts
