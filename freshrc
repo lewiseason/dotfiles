@@ -56,6 +56,9 @@ fresh config/environment --bin=~/.config/openbox/environment
 
 # LXDE
 fresh config/lxde-autostart --file=~/.config/lxsession/LXDE/autostart
+fresh config/lxde-panel --file=~/.config/lxpanel/LXDE/panels/panel
+fresh config/lxde-desktop.conf --file=~/.config/lxsession/LXDE/desktop.conf
+fresh config/lxde-desktop-items.conf --file=~/.config/pcmanfm/LXDE/desktop-items-0.conf
 
 fresh config/sxhkdrc --file=~/.config/sxhkd/sxhkdrc
 

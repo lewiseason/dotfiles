@@ -53,57 +53,57 @@
   <keepBorder>no</keepBorder>
   <animateIconify>no</animateIconify>
   <font place="ActiveWindow">
-    <name>sans</name>
-    <size>9</size>
+    <name>Liberation Sans</name>
+    <size>8</size>
     <!-- font size in points -->
-    <weight>bold</weight>
+    <weight>Normal</weight>
     <!-- 'bold' or 'normal' -->
-    <slant>normal</slant>
+    <slant>Normal</slant>
     <!-- 'italic' or 'normal' -->
   </font>
   <font place="InactiveWindow">
-    <name>sans</name>
+    <name>Liberation Sans</name>
     <size>8</size>
     <!-- font size in points -->
-    <weight>bold</weight>
+    <weight>Normal</weight>
     <!-- 'bold' or 'normal' -->
-    <slant>normal</slant>
+    <slant>Normal</slant>
     <!-- 'italic' or 'normal' -->
   </font>
   <font place="MenuHeader">
-    <name>sans</name>
-    <size>9</size>
+    <name>Liberation Sans</name>
+    <size>8</size>
     <!-- font size in points -->
-    <weight>normal</weight>
+    <weight>Normal</weight>
     <!-- 'bold' or 'normal' -->
-    <slant>normal</slant>
+    <slant>Normal</slant>
     <!-- 'italic' or 'normal' -->
   </font>
   <font place="MenuItem">
-    <name>sans</name>
-    <size>9</size>
+    <name>Liberation Sans</name>
+    <size>8</size>
     <!-- font size in points -->
-    <weight>normal</weight>
+    <weight>Normal</weight>
     <!-- 'bold' or 'normal' -->
-    <slant>normal</slant>
+    <slant>Normal</slant>
     <!-- 'italic' or 'normal' -->
   </font>
   <font place="ActiveOnScreenDisplay">
-    <name>sans</name>
-    <size>9</size>
+    <name>Liberation Sans</name>
+    <size>8</size>
     <!-- font size in points -->
-    <weight>bold</weight>
+    <weight>Normal</weight>
     <!-- 'bold' or 'normal' -->
-    <slant>normal</slant>
+    <slant>Normal</slant>
     <!-- 'italic' or 'normal' -->
   </font>
   <font place="InactiveOnScreenDisplay">
-    <name>sans</name>
-    <size>9</size>
+    <name>Liberation Sans</name>
+    <size>8</size>
     <!-- font size in points -->
-    <weight>bold</weight>
+    <weight>Normal</weight>
     <!-- 'bold' or 'normal' -->
-    <slant>normal</slant>
+    <slant>Normal</slant>
     <!-- 'italic' or 'normal' -->
   </font>
 </theme>
@@ -182,7 +182,9 @@
   <chainQuitKey>C-g</chainQuitKey>
 
   <keybind key="W-m">
-    <action name="ShowMenu"><menu>root-menu</menu></action>
+    <action name="ShowMenu">
+      <menu>root-menu</menu>
+    </action>
   </keybind>
 
   <!-- Window snapping -->
@@ -199,7 +201,7 @@
   </keybind>
 
   <keybind key="W-Left">
-    <action name="Unmaximize" />
+    <action name="Unmaximize"/>
     <action name="MoveResizeTo">
       <x>0</x>
       <y>0</y>
@@ -212,7 +214,7 @@
   </keybind>
 
   <keybind key="W-Right">
-    <action name="Unmaximize" />
+    <action name="Unmaximize"/>
     <action name="MoveResizeTo">
       <x>50%</x>
       <y>0</y>
@@ -225,7 +227,7 @@
   </keybind>
 
   <keybind key="W-Down">
-    <action name="Unmaximize" />
+    <action name="Unmaximize"/>
     <action name="MoveResizeTo">
       <x>25%</x>
       <y>25%</y>
@@ -235,7 +237,7 @@
   </keybind>
 
   <keybind key="W-Insert">
-    <action name="Unmaximize" />
+    <action name="Unmaximize"/>
     <action name="MoveResizeTo">
       <x>0</x>
       <y>0</y>
@@ -248,7 +250,7 @@
   </keybind>
 
   <keybind key="W-Home">
-    <action name="Unmaximize" />
+    <action name="Unmaximize"/>
     <action name="MoveResizeTo">
       <x>33%</x>
       <y>0</y>
@@ -261,7 +263,7 @@
   </keybind>
 
   <keybind key="W-Delete">
-    <action name="Unmaximize" />
+    <action name="Unmaximize"/>
     <action name="MoveResizeTo">
       <x>0</x>
       <y>0</y>
@@ -274,7 +276,7 @@
   </keybind>
 
   <keybind key="W-End">
-    <action name="Unmaximize" />
+    <action name="Unmaximize"/>
     <action name="MoveResizeTo">
       <x>67%</x>
       <y>0</y>
@@ -288,28 +290,48 @@
 
   <!-- Desktop Switching -->
   <keybind key="C-A-Left">
-    <action name="GoToDesktop"><to>left</to><wrap>yes</wrap></action>
+    <action name="GoToDesktop">
+      <to>left</to>
+      <wrap>yes</wrap>
+    </action>
   </keybind>
   <keybind key="C-A-Right">
-    <action name="GoToDesktop"><to>right</to><wrap>yes</wrap></action>
+    <action name="GoToDesktop">
+      <to>right</to>
+      <wrap>yes</wrap>
+    </action>
   </keybind>
   <keybind key="C-S-A-Left">
-    <action name="SendToDesktop"><to>left</to><wrap>yes</wrap></action>
+    <action name="SendToDesktop">
+      <to>left</to>
+      <wrap>yes</wrap>
+    </action>
   </keybind>
   <keybind key="C-S-A-Right">
-    <action name="SendToDesktop"><to>right</to><wrap>yes</wrap></action>
+    <action name="SendToDesktop">
+      <to>right</to>
+      <wrap>yes</wrap>
+    </action>
   </keybind>
   <keybind key="W-1">
-    <action name="GoToDesktop"><to>1</to></action>
+    <action name="GoToDesktop">
+      <to>1</to>
+    </action>
   </keybind>
   <keybind key="W-2">
-    <action name="GoToDesktop"><to>2</to></action>
+    <action name="GoToDesktop">
+      <to>2</to>
+    </action>
   </keybind>
   <keybind key="W-3">
-    <action name="GoToDesktop"><to>3</to></action>
+    <action name="GoToDesktop">
+      <to>3</to>
+    </action>
   </keybind>
   <keybind key="W-4">
-    <action name="GoToDesktop"><to>4</to></action>
+    <action name="GoToDesktop">
+      <to>4</to>
+    </action>
   </keybind>
   <keybind key="W-d">
     <action name="ToggleShowDesktop"/>
@@ -333,7 +355,9 @@
     <action name="Close"/>
   </keybind>
   <keybind key="A-space">
-    <action name="ShowMenu"><menu>client-menu</menu></action>
+    <action name="ShowMenu">
+      <menu>client-menu</menu>
+    </action>
   </keybind>
 
   <!-- Keybindings for window switching -->
@@ -405,22 +429,34 @@
     </mousebind>
 
     <mousebind button="A-Up" action="Click">
-      <action name="GoToDesktop"><to>previous</to></action>
+      <action name="GoToDesktop">
+        <to>previous</to>
+      </action>
     </mousebind>
     <mousebind button="A-Down" action="Click">
-      <action name="GoToDesktop"><to>next</to></action>
+      <action name="GoToDesktop">
+        <to>next</to>
+      </action>
     </mousebind>
     <mousebind button="C-A-Up" action="Click">
-      <action name="GoToDesktop"><to>previous</to></action>
+      <action name="GoToDesktop">
+        <to>previous</to>
+      </action>
     </mousebind>
     <mousebind button="C-A-Down" action="Click">
-      <action name="GoToDesktop"><to>next</to></action>
+      <action name="GoToDesktop">
+        <to>next</to>
+      </action>
     </mousebind>
     <mousebind button="A-S-Up" action="Click">
-      <action name="SendToDesktop"><to>previous</to></action>
+      <action name="SendToDesktop">
+        <to>previous</to>
+      </action>
     </mousebind>
     <mousebind button="A-S-Down" action="Click">
-      <action name="SendToDesktop"><to>next</to></action>
+      <action name="SendToDesktop">
+        <to>next</to>
+      </action>
     </mousebind>
   </context>
 
@@ -470,37 +506,49 @@
     <mousebind button="Right" action="Press">
       <action name="Focus"/>
       <action name="Raise"/>
-      <action name="ShowMenu"><menu>client-menu</menu></action>
+      <action name="ShowMenu">
+        <menu>client-menu</menu>
+      </action>
     </mousebind>
   </context>
 
   <context name="Top">
     <mousebind button="Left" action="Drag">
-      <action name="Resize"><edge>top</edge></action>
+      <action name="Resize">
+        <edge>top</edge>
+      </action>
     </mousebind>
   </context>
 
   <context name="Left">
     <mousebind button="Left" action="Drag">
-      <action name="Resize"><edge>left</edge></action>
+      <action name="Resize">
+        <edge>left</edge>
+      </action>
     </mousebind>
   </context>
 
   <context name="Right">
     <mousebind button="Left" action="Drag">
-      <action name="Resize"><edge>right</edge></action>
+      <action name="Resize">
+        <edge>right</edge>
+      </action>
     </mousebind>
   </context>
 
   <context name="Bottom">
     <mousebind button="Left" action="Drag">
-      <action name="Resize"><edge>bottom</edge></action>
+      <action name="Resize">
+        <edge>bottom</edge>
+      </action>
     </mousebind>
 
     <mousebind button="Right" action="Press">
       <action name="Focus"/>
       <action name="Raise"/>
-      <action name="ShowMenu"><menu>client-menu</menu></action>
+      <action name="ShowMenu">
+        <menu>client-menu</menu>
+      </action>
     </mousebind>
   </context>
 
@@ -535,12 +583,16 @@
       <action name="Focus"/>
       <action name="Raise"/>
       <action name="Unshade"/>
-      <action name="ShowMenu"><menu>client-menu</menu></action>
+      <action name="ShowMenu">
+        <menu>client-menu</menu>
+      </action>
     </mousebind>
     <mousebind button="Right" action="Press">
       <action name="Focus"/>
       <action name="Raise"/>
-      <action name="ShowMenu"><menu>client-menu</menu></action>
+      <action name="ShowMenu">
+        <menu>client-menu</menu>
+      </action>
     </mousebind>
   </context>
 
@@ -595,10 +647,14 @@
       <action name="ToggleMaximize"/>
     </mousebind>
     <mousebind button="Middle" action="Click">
-      <action name="ToggleMaximize"><direction>vertical</direction></action>
+      <action name="ToggleMaximize">
+        <direction>vertical</direction>
+      </action>
     </mousebind>
     <mousebind button="Right" action="Click">
-      <action name="ToggleMaximize"><direction>horizontal</direction></action>
+      <action name="ToggleMaximize">
+        <direction>horizontal</direction>
+      </action>
     </mousebind>
   </context>
 
@@ -615,23 +671,35 @@
 
   <context name="Desktop">
     <mousebind button="Up" action="Click">
-      <action name="GoToDesktop"><to>previous</to></action>
+      <action name="GoToDesktop">
+        <to>previous</to>
+      </action>
     </mousebind>
     <mousebind button="Down" action="Click">
-      <action name="GoToDesktop"><to>next</to></action>
+      <action name="GoToDesktop">
+        <to>next</to>
+      </action>
     </mousebind>
 
     <mousebind button="A-Up" action="Click">
-      <action name="GoToDesktop"><to>previous</to></action>
+      <action name="GoToDesktop">
+        <to>previous</to>
+      </action>
     </mousebind>
     <mousebind button="A-Down" action="Click">
-      <action name="GoToDesktop"><to>next</to></action>
+      <action name="GoToDesktop">
+        <to>next</to>
+      </action>
     </mousebind>
     <mousebind button="C-A-Up" action="Click">
-      <action name="GoToDesktop"><to>previous</to></action>
+      <action name="GoToDesktop">
+        <to>previous</to>
+      </action>
     </mousebind>
     <mousebind button="C-A-Down" action="Click">
-      <action name="GoToDesktop"><to>next</to></action>
+      <action name="GoToDesktop">
+        <to>next</to>
+      </action>
     </mousebind>
 
     <mousebind button="Left" action="Press">
@@ -647,25 +715,37 @@
   <context name="Root">
     <!-- Menus -->
     <mousebind button="Middle" action="Press">
-      <action name="ShowMenu"><menu>client-list-combined-menu</menu></action>
+      <action name="ShowMenu">
+        <menu>client-list-combined-menu</menu>
+      </action>
     </mousebind>
     <mousebind button="Right" action="Press">
-      <action name="ShowMenu"><menu>root-menu</menu></action>
+      <action name="ShowMenu">
+        <menu>root-menu</menu>
+      </action>
     </mousebind>
   </context>
 
   <context name="MoveResize">
     <mousebind button="Up" action="Click">
-      <action name="GoToDesktop"><to>previous</to></action>
+      <action name="GoToDesktop">
+        <to>previous</to>
+      </action>
     </mousebind>
     <mousebind button="Down" action="Click">
-      <action name="GoToDesktop"><to>next</to></action>
+      <action name="GoToDesktop">
+        <to>next</to>
+      </action>
     </mousebind>
     <mousebind button="A-Up" action="Click">
-      <action name="GoToDesktop"><to>previous</to></action>
+      <action name="GoToDesktop">
+        <to>previous</to>
+      </action>
     </mousebind>
     <mousebind button="A-Down" action="Click">
-      <action name="GoToDesktop"><to>next</to></action>
+      <action name="GoToDesktop">
+        <to>next</to>
+      </action>
     </mousebind>
   </context>
 </mouse>

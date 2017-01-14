@@ -46,6 +46,7 @@ Just make sure `curl` is installed.
 - [ ] vim: zenburn?
 - [ ] vim: youcompleteme
 - [ ] xautolock
+- [x] clipit (provided by LXDE)
 
 ## Things to do that wouldn't actually end up in this repo
 

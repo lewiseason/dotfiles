@@ -1,3 +1,16 @@
+!! dmenu
+dmenu.font: xft:LiberationMono:size=8:antialias=true
+
+!! xlock
+xlock.font: -*-liberation-mono-r-*-*-14-*-*-*-*-*-*-*
+xlock.mode: blank
+xlock.lockdelay: 1
+xlock.description: off
+xlock.info:
+xlock.mousemotion: on
+xlock.showdate: off
+
+!! urxvt
 ! Load required extensions
 URxvt.perl-ext-common: default,matcher,font-size,clipboard,fullscreen
 
