@@ -1,4 +1,3 @@
-tint2 &
 sxhkd &
 
 # Notifications
@@ -7,15 +6,3 @@ sxhkd &
 # Volume Control
 (sleep 10 && volumeicon) &
 
-(xmodmap -e "keysym KP_End = KP_1" \
-        -e "keysym KP_Down = KP_2" \
-        -e "keysym KP_Next = KP_3" \
-        -e "keysym KP_Left = KP_4" \
-        -e "keysym KP_Begin = KP_5" \
-        -e "keysym KP_Right = KP_6" \
-        -e "keysym KP_Home = KP_7" \
-        -e "keysym KP_Up = KP_8" \
-        -e "keysym KP_Prior = KP_9" \
-        -e "keysym KP_Insert = KP_0" \
-        -e "keysym KP_Delete = KP_Decimal"
-) &
