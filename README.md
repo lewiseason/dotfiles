@@ -19,6 +19,11 @@ but Ansible will take care of this for the most part.
 
 Just make sure `curl` is installed.
 
+## New (or proposed) dependencies:
+
+* xfce4-power-manager (and a screen locker - it can pick, or I can set one)
+* (not) xscreensaver - remove all trace
+
 ## Things to do
 
 - [x] Write better pubkey-to-(github|bitbucket) script

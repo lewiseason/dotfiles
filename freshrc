@@ -54,6 +54,9 @@ each_in_path "apps/openbox" "~/.config/openbox"
 fresh config/autostart --bin=~/.config/openbox/autostart
 fresh config/environment --bin=~/.config/openbox/environment
 
+# LXDE
+fresh config/lxde-autostart --file=~/.config/lxsession/LXDE/autostart
+
 fresh config/sxhkdrc --file=~/.config/sxhkd/sxhkdrc
 
 fresh config/dunstrc --file=~/.config/dunst/dunstrc

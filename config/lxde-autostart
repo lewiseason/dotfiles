@@ -1,0 +1,6 @@
+@sxhkd
+@dunst
+@lxpanel --profile LXDE
+@pcmanfm --profile LXDE --desktop
+@xscreensaver -no-splash
+@urxvtd -q -f
