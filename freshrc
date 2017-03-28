@@ -14,8 +14,8 @@ fresh rc/\*   --file
 
 # urxvt extensions
 fresh majutsushi/urxvt-font-size font-size --file=~/.urxvt/ext/font-size
-fresh muennich/urxvt-perls clipboard --file=~/.urxvt/ext/clipboard
 fresh effigies/urxvt-perl fullscreen --file=~/.urxvt/ext/fullscreen
+fresh muennich/urxvt-perls deprecated/clipboard --file=~/.urxvt/ext/clipboard
 
 # scripts
 fresh bin/\*  --bin
@@ -94,7 +94,7 @@ fresh git@bitbucket.org:lewiseason/ssh_config.git \* --file=~/.ssh/config --filt
 
 fresh config/redshift.conf --file=~/.config/redshift.conf
 
-fresh config/unison_home.prf --file=~/.unison/home.prf --filter='sed "s/\$USER/$USER/g"'
+fresh config/unison_id.prf --file=~/.unison/id.prf --filter='sed "s/\$USER/$USER/g"'
 
 fresh config/subversion --file=~/.subversion/conf
 
