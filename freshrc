@@ -98,8 +98,6 @@ fresh config/unison_id.prf --file=~/.unison/id.prf --filter='sed "s/\$USER/$USER
 
 fresh config/subversion --file=~/.subversion/conf
 
-fresh config/via.properties --file=~/via.properties
-
 # ln -sf ~/.dotfiles/foo ~/.config/foo
 
 fresh_after_build() {
