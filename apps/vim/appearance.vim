@@ -14,3 +14,6 @@ set modelines=1
 " Update git gutter when I stop typing
 let g:gitgutter_realtime = 1
 set updatetime=200
+
+" Colours for popup menues (such as YCM)
+hi Pmenu ctermfg=15 ctermbg=0 guifg=#ffffff guibg=#000000

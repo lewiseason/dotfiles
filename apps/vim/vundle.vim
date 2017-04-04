@@ -25,8 +25,9 @@ Bundle 'Valloric/YouCompleteMe'
 " Version Control
 Bundle 'airblade/vim-gitgutter'
 
-" Building
+" Building &c
 Bundle 'tpope/vim-dispatch'
+Bundle 'ngmy/vim-rubocop'
 
 " Syntax
 Bundle 'eiginn/iptables-vim'
