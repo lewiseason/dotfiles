@@ -11,6 +11,9 @@ Plugin 'PreserveNoEOL'
 Plugin 'tpope/vim-speeddating'
 Plugin 'jceb/vim-orgmode'
 
+" Languages
+Bundle 'tpope/vim-rails'
+
 " Wrappers
 Bundle 'tpope/vim-tbone'
 Bundle 'tpope/vim-fugitive'

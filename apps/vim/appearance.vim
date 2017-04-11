@@ -17,3 +17,6 @@ set updatetime=200
 
 " Colours for popup menues (such as YCM)
 hi Pmenu ctermfg=15 ctermbg=0 guifg=#ffffff guibg=#000000
+
+" Show the current command-in-progress
+set showcmd

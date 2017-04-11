@@ -29,6 +29,9 @@
 
   whatthecommit = !git commit -m "$(curl http://whatthecommit.com/index.txt)"
 
+[credential]
+  helper = cache --timeout=10800
+
 [merge]
   summary = true
 

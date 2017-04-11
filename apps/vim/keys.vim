@@ -17,3 +17,4 @@ map <Leader>a mugg/^\(Signed-off-by:\\|#\)<CR>k:noh<CR>:read!echo "Acked-by: $(g
 map <Leader>g :GitGutterToggle<CR>
 map <Leader>r :RuboCop<CR>
 map <Leader>n :set number! number?<CR>
+map <Leader>t :Rake test TEST=%<CR>
