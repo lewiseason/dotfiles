@@ -32,17 +32,18 @@ fresh shell/config/\*
 
 # vim
 fresh-options --file=~/.vimrc --marker=\"
-  fresh apps/vim/vundle_before.vim
-  fresh apps/vim/vundle.vim
-  fresh apps/vim/vundle_after.vim
+  fresh apps/nvim/init.vim
+fresh-options
 
-  fresh apps/vim/global.vim
-  fresh apps/vim/appearance.vim
-  fresh apps/vim/indent.vim
-  fresh apps/vim/search.vim
+# NVIM
+fresh-options --file=~/.config/nvim/init.vim --marker=\"
+  fresh apps/nvim/plugins_before.vim
+  fresh apps/nvim/plugins.vim
+  fresh apps/nvim/plugins_after.vim
 
-  fresh apps/vim/keys.vim
-  fresh apps/vim/syntax.vim
+  fresh apps/nvim/init.vim
+  fresh apps/nvim/macros.vim
+  fresh apps/nvim/formats.vim
 fresh-options
 
 # sublime text 3

@@ -6,7 +6,6 @@
 [core]
   repositoryformatversion = 0
   filemode = true
-  editor = vim
   bare = false
   logallrefupdates = true
   attributesfile = ~/.gitattributes
