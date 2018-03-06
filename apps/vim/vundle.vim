@@ -43,5 +43,3 @@ Bundle 'dracula/vim'
 " Misc
 Bundle 'xolox/vim-misc'
 Bundle 'xolox/vim-notes'
-
-Plugin 'ryanss/vim-hackernews'
