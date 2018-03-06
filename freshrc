@@ -19,13 +19,16 @@ fresh muennich/urxvt-perls deprecated/clipboard --file=~/.urxvt/ext/clipboard
 
 # scripts
 fresh bin/\*  --bin
+# dmenu for pass
+fresh klaasb/passdmenu passdmenu.py --bin=~/bin/pass-dmenu
+fresh jomo/imgur-screenshot imgur-screenshot.sh --bin
+fresh kamranahmedse/git-standup git-standup --bin
+fresh brysgo/git-rails bin/git_rails --bin
+
 
 # generic shell
 fresh shell/aliases/\*
 fresh shell/config/\*
-
-# Use google to evaluate expressions
-fresh pengwynn/dotfiles bin/gxpr --bin
 
 # vim
 fresh-options --file=~/.vimrc --marker=\"
@@ -62,12 +65,6 @@ fresh config/environment --bin=~/.config/openbox/environment
 fresh config/tint2rc --file=~/.config/tint2/tint2rc
 fresh config/sxhkdrc --file=~/.config/sxhkd/sxhkdrc
 fresh config/dunstrc --file=~/.config/dunst/dunstrc
-
-# dmenu for pass
-fresh klaasb/passdmenu passdmenu.py --bin=~/bin/pass-dmenu
-
-# upload screenshot to imgur
-fresh jomo/imgur-screenshot imgur-screenshot.sh --bin
 
 # bash
 fresh-options --file=~/.bashrc
