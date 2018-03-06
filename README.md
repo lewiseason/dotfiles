@@ -52,4 +52,8 @@ Just make sure `curl` is installed.
 * https://github.com/foobacca/dotfiles/blob/master/tmux/save-buffer-history
 * http://blog.sensible.io/2014/05/09/supercharge-your-vim-into-ide-with-ctags.html
 
+* Keeping history forever
+	* https://github.com/larkery/zsh/blob/master/sqlite-history.zsh
+	* https://github.com/larkery/zsh/blob/master/histdb-merge
+
 [fresh]: http://freshshell.com

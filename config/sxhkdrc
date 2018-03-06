@@ -6,12 +6,12 @@ super + p
  pass-dmenu -b -x clipboard -f '^(?!Old)'
 
 super + s
+ autorandr -c
+
+super + shift + s
  screenlayout-dmenu -b
 
 # Terminal
-F2
- wmctrl -xa urxvt || urxvr
-
 ctrl + alt + t
  wmctrl -xa urxvt || urxvt
 
@@ -19,17 +19,20 @@ ctrl + alt + shift + t
  urxvt
 
 # Web Browser
-F3
- wmctrl -xa google-chrome || google-chrome
-
 ctrl + alt + w
  wmctrl -xa google-chrome || google-chrome
 
 ctrl + alt + shift + w
  google-chrome
 
+super + g ; super + g
+  gitg
+
 # Screen Locker
 ctrl + alt + l
+ i3lock -d -c 000000
+
+ctrl + F12 ; ctrl + F12
  i3lock -d -c 000000
 
 # Volume
@@ -38,6 +41,13 @@ super + button{4,5,2}
 
 XF86Audio{RaiseVolume,LowerVolume,Mute}
   amixer -q sset Master,0 {5%+,5%-,toggle}
+
+super + F12
+  amixer -q sset Master,0 toggle
+
+# Transport
+super + {F9,F11,F10}
+  dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.{Previous,Next,PlayPause}
 
 # Screen Brightness
 ctrl + super + button{5,4}

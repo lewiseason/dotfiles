@@ -7,6 +7,7 @@ ignore = Name authorized_keys
 ignore = Name id_rsa
 ignore = Name id_rsa.pub
 ignore = Name config
+ignore = Name .master*
 
 path = .gnupg
 ignore = Name S.*

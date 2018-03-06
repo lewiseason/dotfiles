@@ -123,10 +123,10 @@
     browser = /usr/bin/sensible-browser
 
     # Align icons left/right/off
-    icon_position = left
+    icon_position = off
 
     # Paths to default icons.
-    icon_folders = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
+    #icon_folders = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
 
 [frame]
     width = 1

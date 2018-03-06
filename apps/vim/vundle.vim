@@ -38,6 +38,7 @@ Bundle 'chase/vim-ansible-yaml'
 
 " Theming
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'dracula/vim'
 
 " Misc
 Bundle 'xolox/vim-misc'

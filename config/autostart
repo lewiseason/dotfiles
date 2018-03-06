@@ -1,11 +1,14 @@
 tint2 &
 sxhkd &
 
+# Screen Blanking
+xset s 1200 1200 &
+
 # Notifications
 (sleep 1 && dunst) &
 
 # Volume Control
-(sleep 10 && volumeicon) &
+(sleep 1 && volumeicon) &
 
 (xmodmap -e "keysym KP_End = KP_1" \
         -e "keysym KP_Down = KP_2" \

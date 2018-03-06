@@ -11,7 +11,8 @@ URxvt*loginShell: true
 XTerm*TrimSelection: true
 
 ! Appearance
-URxvt.font: xft:Monospace:size=8
+URxvt.font: xft:DejaVu Sans Mono:pixelsize=10
+!URxvt.font: xft:Monospace:size=8
 URxvt.cursorColor: LightGreen
 URxvt*scrollBar: false
 
@@ -30,40 +31,39 @@ URxvt.keysym.Control-minus: font-size:decrease
 ! keybind: Fullscreen
 URxvt.keysym.F11: perl:fullscreen:switch
 
+! atelierdune.dark
 ! special
-*.foreground:   #a2a2a2
-*.background:   #292929
-*.cursorColor:  #a2a2a2
+*.foreground:   #a6a28c
+*.background:   #20201d
 
 ! black
-*.color0:       #4e4e4e
-*.color8:       #777777
+*.color0:       #20201d
+*.color8:       #7d7a68
 
 ! red
-*.color1:       #a9635d
-*.color9:       #ffbbb2
+*.color1:       #d73737
+*.color9:       #d73737
 
 ! green
-*.color2:       #468459
-*.color10:      #9ddeaf
+*.color2:       #60ac39
+*.color10:      #60ac39
 
 ! yellow
-*.color3:       #84763d
-*.color11:      #e0ce91
+*.color3:       #cfb017
+*.color11:      #cfb017
 
 ! blue
-*.color4:       #5879af
-*.color12:      #b3d1ff
+*.color4:       #6684e1
+*.color12:      #6684e1
 
 ! magenta
-*.color5:       #9c6594
-*.color13:      #fabdf0
+*.color5:       #b854d4
+*.color13:      #b854d4
 
 ! cyan
-*.color6:       #008592
-*.color14:      #79e0ed
+*.color6:       #1fad83
+*.color14:      #1fad83
 
 ! white
-*.color7:       #cfcfcf
-*.color15:      #ffffff
-
+*.color7:       #a6a28c
+*.color15:      #fefbec
