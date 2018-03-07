@@ -15,9 +15,7 @@
   autocorrect = 5
 
 [alias]
-  # Will change `git git X` into `git X`
   git = !git
-  extstatus = status --porcelain -u
 
   # Pretty logging (use -p to specify a path)
   lg = log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'\n--abbrev-commit --date=relative
@@ -26,7 +24,10 @@
   semtag = !git tag -a $(version tag) -m \"Version $(version)\"
   semcommit = !git add $(version files) && git commit -m \"Version `version`\" && git semtag
 
-  whatthecommit = !git commit -m "$(curl http://whatthecommit.com/index.txt)"
+  # Identity Switching
+  work = !git config user.email $MAILTO_WORK && git whoami
+  personal = !git config user.email $MAILTO && git whoami
+  whoami = !bash -c 'echo \"$(git config --get user.name) <$(git config --get user.email)>\"'
 
 [credential]
   helper = cache --timeout=10800
