@@ -1,7 +1,7 @@
 EDITOR='nvim'
 VISUAL='nvim'
 PAGER='less -SFXiMR'
-BROWSER='google-chrome:firefox:lynx:elinks'
+BROWSER='firefox:google-chrome'
 MAILTO=me@lewiseason.co.uk
 
 ACK_PAGER="$PAGER"
