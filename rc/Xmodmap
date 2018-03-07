@@ -11,6 +11,10 @@ keycode 89 = 3
 keycode 90 = 0
 keycode 91 = period
 keycode 86 = plus
+keycode 104 = Return
+keycode 106 = slash
+keycode 63 = asterisk
+keycode 82 = minus
 
 ! deactivate Num_Lock key since we don't need it now.
 keycode 77 =
