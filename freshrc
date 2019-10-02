@@ -24,7 +24,7 @@ fresh klaasb/passdmenu passdmenu.py --bin=~/bin/pass-dmenu
 fresh jomo/imgur-screenshot imgur-screenshot.sh --bin
 fresh kamranahmedse/git-standup git-standup --bin
 fresh brysgo/git-rails bin/git_rails --bin
-
+fresh holman/spark spark --bin
 
 # generic shell
 fresh shell/aliases/\*
@@ -66,6 +66,7 @@ fresh config/environment --bin=~/.config/openbox/environment
 fresh config/tint2rc --file=~/.config/tint2/tint2rc
 fresh config/sxhkdrc --file=~/.config/sxhkd/sxhkdrc
 fresh config/dunstrc --file=~/.config/dunst/dunstrc
+fresh config/compton.conf --file=~/.config/compton.conf
 
 # bash
 fresh-options --file=~/.bashrc

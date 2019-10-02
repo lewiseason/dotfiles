@@ -20,6 +20,8 @@ Plug 'tpope/vim-endwise'
 " Languages and Syntax
 Plug 'tpope/vim-rails'
 Plug 'chase/vim-ansible-yaml'
+Plug 'kchmck/vim-coffee-script'
+Plug 'momota/junos.vim'
 
 " Tools
 "Plug 'tpope/vim-bundler'

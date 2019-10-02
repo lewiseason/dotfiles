@@ -5,17 +5,17 @@ BROWSER='firefox:google-chrome'
 MAILTO=me@lewiseason.co.uk
 MAILTO_WORK=lewis.eason@commsworld.com
 
-ACK_PAGER="$PAGER"
+export EDITOR VISUAL PAGER BROWSER MAILTO MAILTO_WORK
 
-LANG='en_GB.UTF-8'
-LS_COLORS=
+export ACK_PAGER="$PAGER"
+export LANG='en_GB.UTF-8'
+export LS_COLORS=
 
-AUTOSSH_POLL=10
+export HISTSIZE=1000000000 SAVEHIST=$HISTSIZE
+
+alias vim=nvim
 
 pathPrepend ~/bin
 pathAppend node_modules/.bin
 
-export EDITOR VISUAL PAGER BROWSER MAILTO MAILTO_WORK
-export LANG PATH LS_COLORS AUTOSSH_POLL ACK_PAGER
-
-alias vim=nvim
+export PATH

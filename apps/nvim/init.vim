@@ -22,6 +22,7 @@ hi CursorLine cterm=bold
 
 set modelines=1
 
+set ruler
 set showcmd
 
 set tabstop=2 softtabstop=2 shiftwidth=2
@@ -35,3 +36,4 @@ set ignorecase smartcase
 " Aliases
 cmap Q q
 cmap Wq wq
+cmap W w
