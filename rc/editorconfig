@@ -21,9 +21,4 @@ indent_style = tab
 
 [*.spec]
 indent_style = tab
-indent_size = 8
-
-[projects/linux/**.{c,h}]
-indent_style = tab
-indent_size = 8
-
+indent_size = 16

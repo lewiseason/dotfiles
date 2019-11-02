@@ -67,6 +67,7 @@ fresh config/tint2rc --file=~/.config/tint2/tint2rc
 fresh config/sxhkdrc --file=~/.config/sxhkd/sxhkdrc
 fresh config/dunstrc --file=~/.config/dunst/dunstrc
 fresh config/compton.conf --file=~/.config/compton.conf
+fresh config/spectaclerc --file=~/.config/spectaclerc
 
 # bash
 fresh-options --file=~/.bashrc

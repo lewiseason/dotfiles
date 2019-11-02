@@ -57,8 +57,8 @@ XF86MonBrightness{Down,Up}
  xbacklight -{dec,inc} 10 -steps 1
 
 # Screenshot
-ctrl + Print
- cd ~/Pictures && scrot -sm
+Print
+ spectacle -rn
 
 alt + Print
  imgur-screenshot.sh
