@@ -1,0 +1,17 @@
+#!/bin/sh
+# List git repos which have a dirty working copy or unstaged files
+cd ~/projects
+find . -maxdepth 2 -type d -name .git | xargs dirname | while read dir
+do
+  cd $dir
+
+  git diff --quiet
+  if test $? -eq 0
+  then
+    [ $(git status --porcelain | wc -l) -eq 0 ] || echo Files: $(basename $dir)
+  else
+    echo Dirty: $(basename $dir)
+  fi
+
+  cd ..
+done
