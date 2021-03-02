@@ -10,6 +10,9 @@ xset s 1200 1200 &
 # Volume Control
 (sleep 1 && volumeicon) &
 
+# Desktop Background
+([ -f ~/Pictures/desktop.jpg ] && feh --bg-scale ~/Pictures/desktop.jpg) &
+
 (xmodmap -e "keysym KP_End = KP_1" \
         -e "keysym KP_Down = KP_2" \
         -e "keysym KP_Next = KP_3" \
