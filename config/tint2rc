@@ -66,11 +66,11 @@ panel_position = bottom left horizontal
 panel_layer = top
 panel_monitor = all
 primary_monitor_first = 1
-autohide = 0
+autohide = 1
 autohide_show_timeout = 0
 autohide_hide_timeout = 0
 autohide_height = 1
-strut_policy = none
+strut_policy = follow_size
 panel_window_name = tint2
 disable_transparency = 0
 mouse_effects = 0
@@ -102,7 +102,7 @@ task_align = left
 task_text = 1
 task_icon = 0
 task_centered = 1
-urgent_nb_of_blink = 7
+urgent_nb_of_blink = 20
 task_maximum_size = 250 0
 task_padding = 8 0 0
 task_font = Sans 7
@@ -128,7 +128,7 @@ systray_background_id = 4
 systray_sort = left2right
 systray_icon_size = 12
 systray_icon_asb = 100 0 25
-systray_monitor = 1
+systray_monitor = primary
 
 #-------------------------------------
 # Launcher
@@ -162,7 +162,7 @@ clock_dwheel_command =
 #-------------------------------------
 # Battery
 battery_tooltip = 1
-battery_low_status = 15
+battery_low_status = 20
 battery_low_cmd = notify-send "battery low"
 bat1_font = Sans 7
 bat2_font = Aller 0

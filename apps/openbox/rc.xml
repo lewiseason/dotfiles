@@ -193,9 +193,6 @@
       <width>100%</width>
       <height>100%</height>
     </action>
-    <action name="ResizeRelative">
-      <bottom>-16</bottom>
-    </action>
   </keybind>
 
   <keybind key="W-Left">
@@ -206,9 +203,6 @@
       <width>50%</width>
       <height>100%</height>
     </action>
-    <action name="ResizeRelative">
-      <bottom>-16</bottom>
-    </action>
   </keybind>
 
   <keybind key="W-Right">
@@ -218,9 +212,6 @@
       <y>0</y>
       <width>50%</width>
       <height>100%</height>
-    </action>
-    <action name="ResizeRelative">
-      <bottom>-16</bottom>
     </action>
   </keybind>
 
@@ -242,9 +233,6 @@
       <width>33%</width>
       <height>100%</height>
     </action>
-    <action name="ResizeRelative">
-      <bottom>-16</bottom>
-    </action>
   </keybind>
 
   <keybind key="W-Home">
@@ -254,9 +242,6 @@
       <y>0</y>
       <width>67%</width>
       <height>100%</height>
-    </action>
-    <action name="ResizeRelative">
-      <bottom>-16</bottom>
     </action>
   </keybind>
 
@@ -268,9 +253,6 @@
       <width>67%</width>
       <height>100%</height>
     </action>
-    <action name="ResizeRelative">
-      <bottom>-16</bottom>
-    </action>
   </keybind>
 
   <keybind key="W-End">
@@ -281,11 +263,47 @@
       <width>32%</width>
       <height>100%</height>
     </action>
-    <action name="ResizeRelative">
-      <bottom>-16</bottom>
+  </keybind>
+
+  <keybind key="W-S-Delete">
+    <action name="Unmaximize" />
+    <action name="MoveResizeTo">
+      <x>0</x>
+      <y>50%</y>
+      <width>50%</width>
+      <height>50%</height>
     </action>
   </keybind>
 
+  <keybind key="W-S-Insert">
+    <action name="Unmaximize" />
+    <action name="MoveResizeTo">
+      <x>0</x>
+      <y>0</y>
+      <width>50%</width>
+      <height>50%</height>
+    </action>
+  </keybind>
+
+  <keybind key="W-S-Home">
+    <action name="Unmaximize" />
+    <action name="MoveResizeTo">
+      <x>50%</x>
+      <y>0</y>
+      <width>50%</width>
+      <height>50%</height>
+    </action>
+  </keybind>
+
+  <keybind key="W-S-End">
+    <action name="Unmaximize" />
+    <action name="MoveResizeTo">
+      <x>50%</x>
+      <y>50%</y>
+      <width>50%</width>
+      <height>50%</height>
+    </action>
+  </keybind>
   <!-- Desktop Switching -->
   <keybind key="C-A-Left">
     <action name="GoToDesktop"><to>left</to><wrap>yes</wrap></action>
@@ -347,10 +365,6 @@
         <action name="Unshade"/>
       </finalactions>
     </action>
-  </keybind>
-
-  <keybind key="W-f">
-    <action name="ToggleDockAutohide"/>
   </keybind>
 
   <keybind key="A-S-Tab">
