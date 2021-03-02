@@ -1,3 +1,7 @@
+# Self
+super + r ; super + r
+ pkill -USR1 sxhkd
+
 # dmenus
 super + space
  dmenu_run -b -i
@@ -18,6 +22,10 @@ ctrl + alt + t
 ctrl + alt + shift + t
  urxvt
 
+# File Manager
+super + f ; super + f
+  pcmanfm
+
 # Web Browser
 ctrl + alt + w
  wmctrl -xa google-chrome || google-chrome
@@ -25,8 +33,12 @@ ctrl + alt + w
 ctrl + alt + shift + w
  google-chrome
 
+# Other apps
 super + g ; super + g
   gitg
+
+super + g ; super + c
+  git-cola
 
 # Screen Locker
 ctrl + alt + l
@@ -62,3 +74,5 @@ Print
 
 alt + Print
  imgur-screenshot.sh
+Scroll_Lock
+ ~/bin/toggle-mute
