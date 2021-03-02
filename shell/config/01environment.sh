@@ -1,7 +1,7 @@
 EDITOR='nvim'
 VISUAL='nvim'
 PAGER='less -SFXiMR'
-BROWSER='firefox'
+BROWSER='google-chrome-unstable'
 MAILTO=me@lewiseason.co.uk
 MAILTO_WORK=lewis.eason@commsworld.com
 
