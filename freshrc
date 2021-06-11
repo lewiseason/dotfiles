@@ -45,15 +45,6 @@ fresh-options --file=~/.config/nvim/init.vim --marker=\"
   fresh apps/nvim/formats.vim
 fresh-options
 
-# sublime text 3
-each_in_path "apps/st3" "~/.config/sublime-text-3/Packages/User"
-
-# konsole
-fresh config/konsolerc --file=~/.config/konsolerc
-each_in_path "apps/konsole" "~/.local/share/konsole"
-# For an old version of konsole/kde
-each_in_path "apps/konsole" "~/.kde/share/apps/konsole"
-
 # mutt
 each_in_path "apps/mutt" "~/.mutt"
 
@@ -93,15 +84,8 @@ fresh git@bitbucket.org:lewiseason/ssh_config.git \* --file=~/.ssh/config --filt
 
 fresh config/redshift.conf --file=~/.config/redshift.conf
 
-fresh config/unison_id.prf --file=~/.unison/id.prf --filter='sed "s/\$USER/$USER/g"'
-
 fresh config/subversion --file=~/.subversion/conf
 
-# ln -sf ~/.dotfiles/foo ~/.config/foo
-
-fresh_after_build() {
-  conditionally_clear_zgen_cache
-
-  # Stop konsole from moaning
-  chmod u+w ~/.config/konsolerc
-}
+#fresh_after_build() {
+#  conditionally_clear_zgen_cache
+#}
