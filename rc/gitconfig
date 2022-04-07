@@ -39,7 +39,7 @@
   rebase = true
 
 [push]
-  default = current
+  default = upstream
 
 [color]
   ui = true
