@@ -15,7 +15,8 @@ export HISTSIZE=1000000000 SAVEHIST=$HISTSIZE
 
 alias vim=nvim
 
-pathPrepend ~/bin
 pathAppend node_modules/.bin
+
+PATH=~/bin:$PATH
 
 export PATH

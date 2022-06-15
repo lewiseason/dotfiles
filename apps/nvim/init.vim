@@ -10,6 +10,9 @@ syntax on
 " Style for popup menus
 hi Pmenu ctermfg=15 ctermbg=0 guifg=#ffffff guibg=#000000
 
+" Style for visual selection
+hi Visual cterm=reverse ctermbg=white ctermfg=darkblue
+
 set scrolloff=4
 set sidescrolloff=8
 set sidescroll=1
@@ -37,3 +40,6 @@ set ignorecase smartcase
 cmap Q q
 cmap Wq wq
 cmap W w
+
+" ctrlp
+let g:ctrlp_custom_ignore = 'node_modules'

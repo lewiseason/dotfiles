@@ -19,3 +19,5 @@ keycode 82 = minus
 ! deactivate Num_Lock key since we don't need it now.
 keycode 77 =
 
+! activate compose key
+keycode 108 = Multi_key

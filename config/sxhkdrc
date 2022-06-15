@@ -57,6 +57,16 @@ XF86Audio{RaiseVolume,LowerVolume,Mute}
 super + F12
   amixer -q sset Master,0 toggle
 
+# Busy light
+super + F5
+  busylight on green
+
+super + F6
+  busylight on red
+
+super + F7
+  busylight off
+
 # Transport
 super + {F9,F11,F10}
   dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.{Previous,Next,PlayPause}
@@ -70,9 +80,15 @@ XF86MonBrightness{Down,Up}
 
 # Screenshot
 Print
- spectacle -rn
+ xfce4-screenshooter -r -s /tmp/screenshot.png && xclip -sel clip -t image/png /tmp/screenshot.png && mv /tmp/screenshot.png ~/Pictures/screenshot-$(date -Iseconds | tr : - | tr T '_').png
+ #spectacle -nbr -o /tmp/screenshot.png && xclip -sel clip -t image/png /tmp/screenshot.png && mv /tmp/screenshot.png ~/Pictures/screenshot-$(date -Iseconds | tr : - | tr T '_').png
 
-alt + Print
- imgur-screenshot.sh
+ctrl + Print
+ spectacle -bcr
+ # spectacle -nbr -o /tmp/screenshot.png && xclip -sel clip -t image/png /tmp/screenshot.png && mv /tmp/screenshot.png ~/Pictures/screenshot-$(date -Iseconds | tr : - | tr T '_').png
+
+super + Print
+ flatpak run com.uploadedlobster.peek
+
 Scroll_Lock
  ~/bin/toggle-mute

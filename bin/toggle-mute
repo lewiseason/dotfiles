@@ -6,9 +6,13 @@ muted=$(pactl list sources | grep --after 30 $default_source | grep 'Mute: yes' 
 
 if [ $muted -eq 0 ]
 then
-  pacmd set-source-mute @DEFAULT_SOURCE@ 1
+  pactl set-source-mute @DEFAULT_SOURCE@ 1
   notify-send -t 2000 -u low -h string:x-canonical-private-synchronous:mute-status 'Default Input Muted'
+  busylight on green
+  (mosquitto_pub -h 192.168.0.3 -t annunciator/leds/1/function -m 'blank') &
 else
-  pacmd set-source-mute @DEFAULT_SOURCE@ 0
+  pactl set-source-mute @DEFAULT_SOURCE@ 0
   notify-send -t 2000 -u low -h string:x-canonical-private-synchronous:mute-status 'Default Input Unmuted'
+  busylight on red
+  (mosquitto_pub -h 192.168.0.3 -t annunciator/leds/1/function -m 'blink color=#ff0000 onTime=100 offTime=100 offLevel=20') &
 fi
