@@ -19,13 +19,10 @@ fresh muennich/urxvt-perls deprecated/clipboard --file=~/.urxvt/ext/clipboard
 
 # scripts
 fresh bin/\*  --bin
-# dmenu for pass
-fresh klaasb/passdmenu passdmenu.py --bin=~/bin/pass-dmenu
 fresh kamranahmedse/git-standup git-standup --bin
 fresh brysgo/git-rails bin/git_rails --bin
 fresh holman/spark spark --bin
 fresh garybernhardt/dotfiles bin/git-churn --bin
-fresh cspeterson/lastpass-dmenu lastpass-dmenu --bin
 
 # generic shell
 fresh shell/aliases/\*
