@@ -43,3 +43,5 @@ cmap W w
 
 " ctrlp
 let g:ctrlp_custom_ignore = 'node_modules'
+
+colorscheme dracula

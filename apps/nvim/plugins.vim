@@ -2,9 +2,9 @@
 " :UpdateRemotePlugins
 
 " Completion
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+"Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 "Plug 'zchee/deoplete-jedi'         " Python
-Plug 'fishbullet/deoplete-ruby'    " Ruby
+"Plug 'fishbullet/deoplete-ruby'    " Ruby
 "Plug 'fszymanski/deoplete-emoji'   " Emoji
 
 " Ctrl-P
@@ -20,8 +20,8 @@ Plug 'tpope/vim-endwise'
 " Languages and Syntax
 Plug 'tpope/vim-rails'
 Plug 'chase/vim-ansible-yaml'
-Plug 'kchmck/vim-coffee-script'
-Plug 'momota/junos.vim'
+"Plug 'kchmck/vim-coffee-script'
+"Plug 'momota/junos.vim'
 
 " Tools
 "Plug 'tpope/vim-bundler'
@@ -31,4 +31,4 @@ Plug 'tpope/vim-dispatch'
 Plug 'mattn/emmet-vim'
 
 " Themes
-"Plug 'dracula/vim'
+Plug 'dracula/vim'
