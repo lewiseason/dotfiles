@@ -1,7 +1,7 @@
 EDITOR='nvim'
 VISUAL='nvim'
 PAGER='less -SFXiMR'
-BROWSER='google-chrome-unstable'
+BROWSER='google-chrome'
 MAILTO=me@lewiseason.co.uk
 MAILTO_WORK=lewis.eason@commsworld.com
 
@@ -16,7 +16,8 @@ export HISTSIZE=1000000000 SAVEHIST=$HISTSIZE
 alias vim=nvim
 
 pathAppend node_modules/.bin
+pathAppend ~/.cargo/bin
 
-PATH=~/bin:$PATH
+PATH=~/.rvm/bin:~/bin:$PATH
 
 export PATH
