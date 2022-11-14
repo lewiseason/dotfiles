@@ -42,10 +42,10 @@ super + g ; super + c
 
 # Screen Locker
 ctrl + alt + l
- i3lock -d -c 000000
+ (sleep 1; xset dpms force off) & i3lock -d -c 000000
 
 ctrl + F12 ; ctrl + F12
- i3lock -d -c 000000
+ (sleep 1; xset dpms force off) & i3lock -d -c 000000
 
 # Volume
 super + button{4,5,2}
