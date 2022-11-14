@@ -11,7 +11,7 @@ xset s 1200 1200 &
 (sleep 1 && volumeicon) &
 
 # Desktop Background
-([ -f ~/Pictures/desktop.jpg ] && feh --bg-scale ~/Pictures/desktop.jpg) &
+(styli.sh -s island) &
 
 (xmodmap -e "keysym KP_End = KP_1" \
         -e "keysym KP_Down = KP_2" \
@@ -25,3 +25,6 @@ xset s 1200 1200 &
         -e "keysym KP_Insert = KP_0" \
         -e "keysym KP_Delete = KP_Decimal"
 ) &
+
+xscreensaver-command -exit &
+xscreensaver -no-splash &

@@ -23,6 +23,7 @@ fresh kamranahmedse/git-standup git-standup --bin
 fresh brysgo/git-rails bin/git_rails --bin
 fresh holman/spark spark --bin
 fresh garybernhardt/dotfiles bin/git-churn --bin
+fresh thevinter/styli.sh styli.sh --bin
 
 # generic shell
 fresh shell/aliases/\*
