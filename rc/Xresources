@@ -11,8 +11,7 @@ URxvt*loginShell: true
 XTerm*TrimSelection: true
 
 ! Appearance
-URxvt.font: xft:DejaVu Sans Mono:pixelsize=10
-!URxvt.font: xft:Monospace:size=8
+URxvt.font: xft:JetBrains Mono:pixelsize=20
 URxvt.cursorColor: LightGreen
 URxvt*scrollBar: false
 
@@ -40,78 +39,42 @@ URxvt.keysym.Control-minus: font-size:decrease
 ! keybind: Fullscreen
 URxvt.keysym.F11: perl:fullscreen:switch
 
-!! atelierdune.dark
-!! special
-!*.foreground:   #a6a28c
-!*.background:   #20201d
-!
-!! black
-!*.color0:       #20201d
-!*.color8:       #7d7a68
-!
-!! red
-!*.color1:       #d73737
-!*.color9:       #d73737
-!
-!! green
-!*.color2:       #60ac39
-!*.color10:      #60ac39
-!
-!! yellow
-!*.color3:       #cfb017
-!*.color11:      #cfb017
-!
-!! blue
-!*.color4:       #6684e1
-!*.color12:      #6684e1
-!
-!! magenta
-!*.color5:       #b854d4
-!*.color13:      #b854d4
-!
-!! cyan
-!*.color6:       #1fad83
-!*.color14:      #1fad83
-!
-!! white
-!*.color7:       #a6a28c
-!*.color15:      #fefbec
+#define nord0 #2E3440
+#define nord1 #3B4252
+#define nord2 #434C5E
+#define nord3 #4C566A
+#define nord4 #D8DEE9
+#define nord5 #E5E9F0
+#define nord6 #ECEFF4
+#define nord7 #8FBCBB
+#define nord8 #88C0D0
+#define nord9 #81A1C1
+#define nord10 #5E81AC
+#define nord11 #BF616A
+#define nord12 #D08770
+#define nord13 #EBCB8B
+#define nord14 #A3BE8C
+#define nord15 #B48EAD
 
-! visibone alt. 2 by gutterslob
-! special
-*.foreground:   #cccccc
-*.background:   #333333
-*.cursorColor:  #cccccc
+*.foreground:   nord4
+*.background:   nord0
+*.cursorColor:  nord4
+*fading: 35
+*fadeColor: nord3
 
-! black
-*.color0:       #666666
-*.color8:       #999999
-
-! red
-*.color1:       #cc6699
-*.color9:       #ff99cc
-
-! green
-*.color2:       #99cc66
-*.color10:      #ccff99
-
-! yellow
-*.color3:       #cc9966
-*.color11:      #ffcc99
-
-! blue
-*.color4:       #6699cc
-*.color12:      #99ccff
-
-! magenta
-*.color5:       #9966cc
-*.color13:      #cc99ff
-
-! cyan
-*.color6:       #66cc99
-*.color14:      #99ffcc
-
-! white
-*.color7:       #cccccc
-*.color15:      #ffffff
-
+*.color0: nord1
+*.color1: nord11
+*.color2: nord14
+*.color3: nord13
+*.color4: nord9
+*.color5: nord15
+*.color6: nord8
+*.color7: nord5
+*.color8: nord3
+*.color9: nord11
+*.color10: nord14
+*.color11: nord13
+*.color12: nord9
+*.color13: nord15
+*.color14: nord7
+*.color15: nord6
