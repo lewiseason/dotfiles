@@ -15,6 +15,10 @@ URxvt.font: xft:JetBrains Mono:pixelsize=20
 URxvt.cursorColor: LightGreen
 URxvt*scrollBar: false
 
+! keybind:
+URxvt.keysym.Control-Left:   \033[1;5D
+URxvt.keysym.Control-Right:  \033[1;5C
+
 ! keybind: tmux window switching (Ctrl+PageUp/PageDown)
 URxvt.keysym.Control-Shift-ISO_Left_Tab: \033[5;5~
 URxvt.keysym.Control-Tab: \033[6;5~
