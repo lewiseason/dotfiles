@@ -3,7 +3,7 @@ VISUAL='nvim'
 PAGER='less -SFXiMR'
 BROWSER='google-chrome'
 MAILTO=me@lewiseason.co.uk
-MAILTO_WORK=lewis.eason@commsworld.com
+MAILTO_WORK=lewis@activitystream.com
 
 export EDITOR VISUAL PAGER BROWSER MAILTO MAILTO_WORK
 
@@ -17,6 +17,7 @@ alias vim=nvim
 
 pathAppend node_modules/.bin
 pathAppend ~/.cargo/bin
+pathAppend ~/.local/bin
 
 PATH=~/.rvm/bin:~/bin:$PATH
 
