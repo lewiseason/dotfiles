@@ -1,6 +1,5 @@
 [user]
   name = Lewis Eason
-  email = me@lewiseason.co.uk
   signingkey = 465C30A9
 
 [core]
@@ -31,6 +30,9 @@
 
 [credential]
   helper = cache --timeout=10800
+
+[submodule]
+  recurse = true
 
 [merge]
   summary = true

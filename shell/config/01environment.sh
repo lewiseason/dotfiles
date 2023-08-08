@@ -18,6 +18,7 @@ alias vim=nvim
 pathAppend node_modules/.bin
 pathAppend ~/.cargo/bin
 pathAppend ~/.local/bin
+pathAppend ~/.fly/bin
 
 PATH=~/.rvm/bin:~/bin:$PATH
 

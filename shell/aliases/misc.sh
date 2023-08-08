@@ -8,3 +8,4 @@ alias :q='exit'
 alias :q!='exit'
 
 alias gds='git diff --staged'
+alias dtf='docker-compose logs --follow --tail 0'

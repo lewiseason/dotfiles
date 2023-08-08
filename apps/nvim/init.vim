@@ -6,6 +6,9 @@ let mapleader = ","
 
 filetype plugin on
 syntax on
+colorscheme torte
+
+set mouse=
 
 " Style for popup menus
 hi Pmenu ctermfg=15 ctermbg=0 guifg=#ffffff guibg=#000000
