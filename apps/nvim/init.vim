@@ -29,7 +29,7 @@ set ruler
 set showcmd
 
 set tabstop=2 softtabstop=2 shiftwidth=2
-set expandtab autoindent preserveindent
+set expandtab autoindent preserveindent shiftround
 
 " Searching
 set showmatch
