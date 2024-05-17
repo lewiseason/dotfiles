@@ -1,0 +1,57 @@
+window:
+  decorations: none
+
+font:
+  normal:
+    family: JetBrains Mono
+    style: Regular
+
+selection:
+  semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
+
+cursor:
+  style: block
+
+colors:
+  # Default colors
+  primary:
+    background: '0xf9f9f9'
+    foreground: '0x383a42'
+
+  cursor:
+    cursor: '0x04ff00'
+
+  # Normal colors
+  normal:
+    black:   '0x000000'
+    red:     '0xe45649'
+    green:   '0x50a14f'
+    yellow:  '0x986801'
+    blue:    '0x4078f2'
+    magenta: '0xa626a4'
+    cyan:    '0x0184bc'
+    white:   '0xa0a1a7'
+
+  # Bright colors
+  bright:
+    black:   '0x383a42'
+    red:     '0xe45649'
+    green:   '0x50a14f'
+    yellow:  '0x986801'
+    blue:    '0x4078f2'
+    magenta: '0xa626a4'
+    cyan:    '0x0184bc'
+    white:   '0xffffff'
+
+key_bindings:
+- { key: Tab, mods: Control, chars: "\x1b[6^" }
+- { key: Tab, mods: Shift|Control, chars: "\x1b[5^" }
+  # - { key: Tab, mods: Control, action: ToggleFullscreen }
+  # - { key: Tab, mods: Shift|Control, action: None }
+# ! keybind:
+# URxvt.keysym.Control-Left:   \033[1;5D
+# URxvt.keysym.Control-Right:  \033[1;5C
+
+# ! keybind: tmux window switching (Ctrl+PageUp/PageDown)
+# URxvt.keysym.Control-Shift-ISO_Left_Tab: \033[5;5~
+# URxvt.keysym.Control-Tab: \033[6;5~

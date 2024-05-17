@@ -19,6 +19,7 @@ pathAppend node_modules/.bin
 pathAppend ~/.cargo/bin
 pathAppend ~/.local/bin
 pathAppend ~/.fly/bin
+pathAppend ~/go/bin
 
 PATH=~/.rvm/bin:~/bin:$PATH
 

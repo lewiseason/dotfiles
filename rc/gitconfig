@@ -19,10 +19,6 @@
   # Pretty logging (use -p to specify a path)
   lg = log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'\n--abbrev-commit --date=relative
 
-  # For use with semver/semver2/yavm gem
-  semtag = !git tag -a $(version tag) -m \"Version $(version)\"
-  semcommit = !git add $(version files) && git commit -m \"Version `version`\" && git semtag
-
   # Identity Switching
   work = !git config user.email $MAILTO_WORK && git whoami
   personal = !git config user.email $MAILTO && git whoami
@@ -30,6 +26,7 @@
 
 [credential]
   helper = cache --timeout=10800
+  useHttpPath = true
 
 [submodule]
   recurse = true
@@ -46,11 +43,6 @@
 
 [color]
   ui = true
-
-[sendemail]
-  smtpserver = "mail.eason.io"
-  smtpuser = "leason"
-  smtpencryption = "tls"
 
 # http://tbaggery.com/2010/10/24/reduce-your-rails-schema-conflicts.html
 [merge "railsschema"]

@@ -9,3 +9,6 @@ __pycache__/
 # Project files
 .vscode/
 .idea/
+
+# Tooling artefacts
+.qdrant-initialized
