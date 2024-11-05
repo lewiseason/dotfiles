@@ -12,6 +12,7 @@ if ! zgen saved; then
 
   zgen load zsh-users/zsh-completions src
   zgen load horosgrisa/autoenv
+  zgen load larkery/zsh-histdb
 
   zgen oh-my-zsh themes/jreese
 
