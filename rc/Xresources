@@ -8,7 +8,7 @@ URxvt.urgentOnBell: true
 URxvt*loginShell: true
 
 ! Do not copy trailing spaces
-XTerm*TrimSelection: true
+*.TrimSelection: true
 
 ! Appearance
 URxvt.font: xft:JetBrains Mono:pixelsize=20
