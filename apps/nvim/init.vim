@@ -6,7 +6,7 @@ let mapleader = ","
 
 filetype plugin on
 syntax on
-colorscheme torte
+colorscheme shine
 
 set mouse=
 
