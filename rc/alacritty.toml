@@ -1,0 +1,54 @@
+[colors.bright]
+black = "0x383a42"
+blue = "0x4078f2"
+cyan = "0x0184bc"
+green = "0x50a14f"
+magenta = "0xa626a4"
+red = "0xe45649"
+white = "0xffffff"
+yellow = "0x986801"
+
+[colors.cursor]
+cursor = "0x04ff00"
+
+[colors.normal]
+black = "0x000000"
+blue = "0x4078f2"
+cyan = "0x0184bc"
+green = "0x50a14f"
+magenta = "0xa626a4"
+red = "0xe45649"
+white = "0xa0a1a7"
+yellow = "0x986801"
+
+[colors.primary]
+background = "0xf9f9f9"
+foreground = "0x383a42"
+
+[cursor]
+style = "block"
+
+[font.normal]
+family = "JetBrains Mono"
+style = "Regular"
+
+[[keyboard.bindings]]
+chars = "\u001B[6;5~"
+key = "Tab"
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = "\u001B[5^"
+key = "Tab"
+mods = "Shift|Control"
+
+[selection]
+semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
+
+[window]
+decorations = "none"
+
+[bell]
+duration = 100
+color = "#ffcccc"
+
