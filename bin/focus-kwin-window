@@ -1,0 +1,209 @@
+#!/usr/bin/python3
+# You might need to pip install pydbus
+
+import hashlib
+import os
+import pydbus
+import subprocess
+import sys
+
+from gi.repository import GLib
+
+
+def generate_dump_script():
+    return """
+function kwindump() {
+    var clients = workspace.clientList();
+    for (var i=0; i<clients.length; i++) {
+        var client = clients[i];
+        console.warn("Client: " + client + "\\n    Title: " + client.caption + "\\n    Class: " + client.resourceClass);
+    }
+}
+kwindump();
+"""
+
+
+def generate_script(window_title, window_class):
+    window_title_escaped = (window_title or "").replace("'", "\\'")
+    window_class_escaped = (window_class or "").replace("'", "\\'")
+
+    return """
+function kwinactivateclient(clientClass, clientCaption) {
+    var clients = workspace.clientList();
+    var compareToCaption = new RegExp(clientCaption || '', 'i');
+    var compareToClass = clientClass;
+    var isCompareToClass = clientClass.length > 0
+    for (var i=0; i<clients.length; i++) {
+        var client = clients[i];
+        console.log(client);
+        var classCompare = (isCompareToClass && client.resourceClass == compareToClass)
+        var captionCompare = (!isCompareToClass && compareToCaption.exec(client.caption))
+        if (classCompare || captionCompare) {
+            if (workspace.activeClient != client) {
+                workspace.activeClient = client;
+            }
+            callDBus(
+                'com.WindowManagement', '/com/WindowManagement', 'com.WindowManagement', 'WindowFound'
+            );
+            return;
+        }
+    }
+    callDBus(
+        'com.WindowManagement', '/com/WindowManagement', 'com.WindowManagement', 'WindowNotFound'
+    );
+}
+kwinactivateclient('%(window_class_escaped)s', '%(window_title_escaped)s');
+""" % locals()
+
+
+class WindowManagement(object):
+    """
+    <node>
+        <interface name='com.WindowManagement'>
+            <method name='WindowFound'>
+            </method>
+            <method name='WindowNotFound'>
+            </method>
+        </interface>
+    </node>
+    """
+
+    def WindowFound(self):
+        self.found = True
+        print(f"{sys.argv[0]}: window found", file=sys.stderr)
+
+    def WindowNotFound(self):
+        self.found = False
+        print(f"{sys.argv[0]}: window not found", file=sys.stderr)
+
+    def __init__(self):
+        self.found = None
+
+
+def loadScript(path: str, name: str) -> int:
+    return int(
+        subprocess.check_output(
+            [
+                "dbus-send",
+                "--session",
+                "--dest=org.kde.KWin",
+                "--print-reply=literal",
+                "/Scripting",
+                "org.kde.kwin.Scripting.loadScript",
+                f"string:{path}",
+                f"string:{name}",
+            ],
+            text=True,
+        ).split()[-1]
+    )
+
+
+def run_script_in_kwin(bus, path, name):
+    scripting = bus.get("org.kde.KWin", "/Scripting")["org.kde.kwin.Scripting"]
+    script_id = loadScript(path, name)
+    if script_id == -1:
+        unload = scripting.unloadScript(name)
+        assert unload, unload
+        script_id = loadScript(path, name)
+    script = bus.get("org.kde.KWin", f"/{script_id}")["org.kde.kwin.Script"]
+    script.run()
+    script.stop()
+    unload = scripting.unloadScript(name)
+
+
+def execute(bus, window_title, window_class, quitter):
+    script_folder_root = os.getenv("XDG_CONFIG_HOME", os.environ["HOME"])
+    script_folder = os.path.join(script_folder_root, ".wwscripts")
+    name = hashlib.md5(f"{window_title}-{window_class}".encode("utf-8")).hexdigest()
+    path = os.path.join(script_folder, name)
+
+    script = generate_script(window_title, window_class)
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    with open(path, "w") as f:
+        f.write(script)
+
+    try:
+        run_script_in_kwin(bus, path, name)
+    except Exception as e:
+        print(f"{sys.argv[0]}: fatal error: {e}", file=sys.stderr)
+        sys.exit(4)
+
+    GLib.idle_add(quitter)
+
+
+def dump(bus):
+    script_folder_root = os.getenv("XDG_CONFIG_HOME", os.environ["HOME"])
+    script_folder = os.path.join(script_folder_root, ".wwscripts")
+    name = hashlib.md5(f"{sys.argv[0]}-dump".encode("utf-8")).hexdigest()
+    path = os.path.join(script_folder, name)
+
+    script = generate_dump_script()
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    with open(path, "w") as f:
+        f.write(script)
+
+    try:
+        run_script_in_kwin(bus, path, name)
+    except Exception as e:
+        print(f"{sys.argv[0]}: fatal error: {e}", file=sys.stderr)
+        sys.exit(4)
+
+
+def usage():
+    print(
+        "usage:\n\n"
+        f"  {sys.argv[0]} <window title regexp> [optional command and args if not found]\n"
+        f"  {sys.argv[0]} --class <window class> [optional command and args if not found]\n"
+        f"  {sys.argv[0]} --dump\n"
+        "\n"
+        "Returns 1 when the window is not found, 0 when it is.\n"
+        "\n"
+        "If an optional command (with or without arguments) is specified"
+        " then the command will be run if the window is not found.\n"
+        "\n"
+        "--dump makes KWin dump to the journal a list of clients with their"
+        " window titles and resource classes.  You can retrieve this list by"
+        " running journalctl _COMM=kwin_wayland under Wayland.",
+        file=sys.stderr,
+    )
+    sys.exit(os.EX_USAGE)
+
+
+args = sys.argv[1:]
+try:
+    window_class: str | None = None
+    window_title: str | None = args[0]
+    args = args[1:]
+except IndexError:
+    usage()
+
+if window_title == "--help":
+    usage()
+
+if window_title == "--dump":
+    dump(pydbus.SessionBus())
+    sys.exit(0)
+
+if window_title == "--class":
+    try:
+        window_title, window_class, args = None, args[0], args[1:]
+    except IndexError:
+        print(
+            f"{sys.argv[0]}: error: the --class parameter requires a window class",
+            file=sys.stderr,
+        )
+        usage()
+
+optional_cmd = args
+
+bus = pydbus.SessionBus()
+wm = WindowManagement()
+bus.publish("com.WindowManagement", wm)
+loop = GLib.MainLoop()
+GLib.idle_add(execute, bus, window_title, window_class, loop.quit)
+loop.run()
+
+if not optional_cmd:
+    sys.exit(0 if wm.found else 1)
+
+os.execvp(optional_cmd[0], optional_cmd)
