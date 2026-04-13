@@ -14,9 +14,12 @@ def generate_dump_script():
     return """
 function kwindump() {
     var clients = workspace.clientList();
-    for (var i=0; i<clients.length; i++) {
+    var currentActivity = workspace.currentActivity;
+    for (var i = 0; i < clients.length; i++) {
         var client = clients[i];
-        console.warn("Client: " + client + "\\n    Title: " + client.caption + "\\n    Class: " + client.resourceClass);
+        if (client.activities.indexOf(currentActivity) !== -1) {
+            console.warn("Client: " + client + "\n    Title: " + client.caption + "\n    Class: " + client.resourceClass);
+        }
     }
 }
 kwindump();
@@ -30,14 +33,20 @@ def generate_script(window_title, window_class):
     return """
 function kwinactivateclient(clientClass, clientCaption) {
     var clients = workspace.clientList();
+    var currentActivity = workspace.currentActivity;
     var compareToCaption = new RegExp(clientCaption || '', 'i');
     var compareToClass = clientClass;
-    var isCompareToClass = clientClass.length > 0
-    for (var i=0; i<clients.length; i++) {
+    var isCompareToClass = clientClass.length > 0;
+
+    for (var i = 0; i < clients.length; i++) {
         var client = clients[i];
-        console.log(client);
-        var classCompare = (isCompareToClass && client.resourceClass == compareToClass)
-        var captionCompare = (!isCompareToClass && compareToCaption.exec(client.caption))
+        if (client.activities.indexOf(currentActivity) === -1) {
+            continue;
+        }
+
+        var classCompare = (isCompareToClass && client.resourceClass == compareToClass);
+        var captionCompare = (!isCompareToClass && compareToCaption.exec(client.caption));
+
         if (classCompare || captionCompare) {
             if (workspace.activeClient != client) {
                 workspace.activeClient = client;
@@ -52,6 +61,7 @@ function kwinactivateclient(clientClass, clientCaption) {
         'com.WindowManagement', '/com/WindowManagement', 'com.WindowManagement', 'WindowNotFound'
     );
 }
+
 kwinactivateclient('%(window_class_escaped)s', '%(window_title_escaped)s');
 """ % locals()
 
