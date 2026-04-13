@@ -12,3 +12,4 @@ __pycache__/
 
 # Tooling artefacts
 .qdrant-initialized
+.claude/settings.local.json
